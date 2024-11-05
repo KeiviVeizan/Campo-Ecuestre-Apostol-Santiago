@@ -20,6 +20,7 @@ function App() {
                 <li><a href="">Nuestros Planes</a></li>
                 <li><a href="">Acerca de Nosotros</a></li>
                 <li><a href="">Inicio</a></li>
+                <li><a href="">Iniciar sesión</a></li>
               </ul>
             </nav>
           </div>

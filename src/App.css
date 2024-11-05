@@ -159,6 +159,33 @@ header h1,a,p, .header-bottom h1{
 }
 /*Para computadoras*/
 @media(min-width: 1024px){
+
+  .menu a{
+    font-size: 20px;
+    margin: 30px 30px;
+    transition: color, background-color, .5s;
+  }
+  .menu a:hover{
+    background-color: rgba(0, 0, 0, 0.5);
+    color: rgb(111, 205, 111);
+    padding: 15px 10px;
+    border-radius: 20px;
+    
+  }
+  .header-bottom{
+    height: 80vh;
+  }
+  .header-bottom h1{
+    font-size: 70px;
+    max-width: 70%;
+  }
+  .header-bottom p{
+    font-size: 20px;
+    font-family: "Myriad Regular";
+    max-width: 50%;
+  }
+}
+@media(min-width: 1440px){
   .menu a{
     font-size: 25px;
   }
@@ -174,9 +201,6 @@ header h1,a,p, .header-bottom h1{
     font-family: "Myriad Regular";
     max-width: 50%;
   }
-}
-@media(min-width: 1440px){
-  
 }
 @media(min-width: 2560px){
   
