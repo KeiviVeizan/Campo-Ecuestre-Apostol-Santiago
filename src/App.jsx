@@ -2,15 +2,21 @@ import { useState } from 'react'
 import './App.css'
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [Menu, setMenu] = useState(false)
 
+  const MenuNav = () =>{
+    setMenu(!Menu);
+  };
   return (
     <>
     <article className='inicio'>
       <header>
           <div className='header-top'>
             <nav>
-              <ul>
+              <button className='button-menu' onClick={MenuNav}>
+                  ☰
+              </button>
+              <ul className={`menu ${Menu ? 'menu-open' : ''}`}>
                 <li><a href="">Nuestros Planes</a></li>
                 <li><a href="">Acerca de Nosotros</a></li>
                 <li><a href="">Inicio</a></li>
