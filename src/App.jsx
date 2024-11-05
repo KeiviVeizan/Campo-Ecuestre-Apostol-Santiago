@@ -1,6 +1,4 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
 
 function App() {
@@ -8,26 +6,25 @@ function App() {
 
   return (
     <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Cameo Puto</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          El segales no sabe hacer un clone <code>#QueAprendaLaSemanticaElSegales</code> Viva hitler
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <header>
+        <div className='header-top'>
+          <nav>
+            <ul>
+              <li><a href="">Nuestros Planes</a></li>
+              <li><a href="">Acerca de Nosotros</a></li>
+              <li><a href="">Inicio</a></li>
+            </ul>
+          </nav>
+        </div>
+        <div className='header-bottom'>
+          <h1>
+            Centro Ecuestre Apóstol Santiago S.A.
+          </h1>
+          <p>
+            Entrena, diviértete y vive experiencias inolvidables en nuestro campo ecuestre.
+          </p>
+        </div>
+      </header>
     </>
   )
 }
