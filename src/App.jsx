@@ -1,11 +1,31 @@
 import { useState } from 'react'
-import './App.css'
-import './Components/sign_in'
+import './component css/Card-info.css'
+import extraInformationCard from './assets/extraInformationCard';
 function App() {
-  const [count, setCount] = useState(0)
+  const [Menu, setMenu] = useState(false)
 
+  const MenuNav = () =>{
+    setMenu(!Menu);
+  };
   return (
-    <>{Sign_in}</>
+    <>  
+    <main>
+      <h2>
+        Haste socio del mejor campo ecuestre de la ciudad
+      </h2>
+      <section className='section-info'>
+              {extraInformationCard.map((info) => (
+                  <div key={info.id} className={`info info${info.id}`}>
+                      <div className='Card-Info'>
+                      <h3>{info.title}</h3>
+                      <p>{info.description}</p>
+                      </div>
+                      {info.images && <img src={info.images} alt="Imagen de la empresa" />}
+                  </div>
+              ))}
+      </section>
+    </main>  
+    </>
   )
 }
 
