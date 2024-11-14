@@ -1,40 +1,38 @@
-import { useState } from 'react'
-import './App.css'
+import { useState } from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+// import RegisterPage from "./pages/RegisterPage.jsx";
+import LoginPage from "./Pages/LoginPage.jsx";
+import { AuthProvider } from "./context/AuthContext.jsx";
+// import TasksPages from "./pages/TasksPages.jsx";
+// import TasksFormPage from "./pages/TasksFormPage.jsx";
+// import ProfilePage from "./pages/ProfilePage.jsx";
+import HomePage from "./Pages/HomePage.jsx";
+// import ProtectedRoute from "./ProtectedRoute.jsx";
+// import { TaskProvider } from "./context/TasksContext.jsx";
+// import Navbar from "./components/Navbar.jsx";
+
+// import "./App.css";
 function App() {
-  const [Menu, setMenu] = useState(false)
-
-  const MenuNav = () =>{
-    setMenu(!Menu);
-  };
   return (
-    <>
-    <article className='inicio'>
-      <header>
-          <div className='header-top'>
-            <nav>
-              <button className='button-menu' onClick={MenuNav}>
-                  ☰
-              </button>
-              <ul className={`menu ${Menu ? 'menu-open' : ''}`}>
-                <li><a href="">Historia</a></li>
-                <li><a href="">Planes</a></li>
-                <li><a href="">Servicios</a></li>
-                <li><a href="">Ingresar</a></li>
-              </ul>
-            </nav>
-          </div>
-        </header>
-          <div className='header-bottom'>
-            <h1>
-              Centro Ecuestre Apóstol Santiago S.A.
-            </h1>
-            <p>
-              Entrena, diviértete y vive experiencias inolvidables en nuestro campo ecuestre.
-            </p>
-          </div>
-    </article>    
-    </>
-  )
+    <AuthProvider>
+      <BrowserRouter>
+        <Routes>
+          {/* Rutas Publicas */}
+          <Route path="/" element={<HomePage />} />
+          <Route path="/login" element={<LoginPage />} />
+          {/* <Route path="/register" element={<RegisterPage />} /> */}
+          {/* Rutas Privadas */}
+          {/* <Route element={<ProtectedRoute />}> */}
+          {/* <Route path="/tasks" element={<TasksPages />} /> */}
+          {/* <Route path="/add-task" element={<TasksFormPage />} /> */}
+          {/* <Route path="/tasks/:id" element={<TasksFormPage />} /> */}
+          {/* <Route path="/profile" element={<ProfilePage />} /> */}
+          {/* </Route> */}
+        </Routes>
+        {/* </main> */}
+      </BrowserRouter>
+    </AuthProvider>
+  );
 }
+export default App;
 
-export default App
