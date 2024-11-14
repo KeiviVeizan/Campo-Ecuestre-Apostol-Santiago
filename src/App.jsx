@@ -1,6 +1,5 @@
 import { useState } from 'react'
 import './App.css'
-
 function App() {
   const [Menu, setMenu] = useState(false)
 
@@ -17,10 +16,10 @@ function App() {
                   ☰
               </button>
               <ul className={`menu ${Menu ? 'menu-open' : ''}`}>
-                <li><a href="">Nuestros Planes</a></li>
-                <li><a href="">Acerca de Nosotros</a></li>
-                <li><a href="">Inicio</a></li>
-                <li><a href="">Iniciar sesión</a></li>
+                <li><a href="">Historia</a></li>
+                <li><a href="">Planes</a></li>
+                <li><a href="">Servicios</a></li>
+                <li><a href="">Ingresar</a></li>
               </ul>
             </nav>
           </div>
@@ -33,7 +32,7 @@ function App() {
               Entrena, diviértete y vive experiencias inolvidables en nuestro campo ecuestre.
             </p>
           </div>
-    </article>      
+    </article>    
     </>
   )
 }
