@@ -18,4 +18,4 @@ const userSchema=new mongoose.Schema({
 },{
     timestamps:true
 })
-export default mongoose.model('User',userSchema)//El 'User' es el modelo que se creara en base al squema userSchema
+export default mongoose.model('User',userSchema)

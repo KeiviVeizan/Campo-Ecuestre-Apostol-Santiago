@@ -22,11 +22,9 @@ export const AuthProvider = ({ children }) => {
       setUser(res.data);
       setIsAuthenticated(true);
     } catch (error) {
-      // console.log(error.response.data)
       setErrors(error.response.data);
     }
   };
-
   const signin = async (user) => {
     try {
       const res = await loginRequest(user);
@@ -41,12 +39,11 @@ export const AuthProvider = ({ children }) => {
     }
   };
 
-  
-  const logout=()=>{
-    Cookies.remove("token")
-    setIsAuthenticated(false)
-    setUser(null)
-  }
+  const logout = () => {
+    Cookies.remove("token");
+    setIsAuthenticated(false);
+    setUser(null);
+  };
   useEffect(() => {
     if (errors.length > 0) {
       const timer = setTimeout(() => {

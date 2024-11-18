@@ -28,30 +28,27 @@ function HomePage() {
                   <a href="">Servicios</a>
                 </li>
                 <ul className="flex gap-x-2">
-        {isAuthenticated ? (
-          <>
-            <li>
-              <Link
-                to="/"
-                onClick={() => {
-                  logout();
-                }}
-              >
-                Logout
-              </Link>
-            </li>
-          </>
-        ) : (
-          <>
-            <li>
-              <Link  to="/login">
-                Login
-              </Link>
-            </li>
-          </>
-        )}
-      </ul>
-
+                  {isAuthenticated ? (
+                    <>
+                      <li>
+                        <Link
+                          to="/"
+                          onClick={() => {
+                            logout();
+                          }}
+                        >
+                          Salir
+                        </Link>
+                      </li>
+                    </>
+                  ) : (
+                    <>
+                      <li>
+                        <Link to="/login">Ingresar</Link>
+                      </li>
+                    </>
+                  )}
+                </ul>
               </ul>
             </nav>
           </div>
