@@ -1,5 +1,5 @@
 import { createContext, useContext, useEffect, useState } from "react";
-import { registerRequest, loginRequest, verityTokenRequet } from "../api/auth";
+import { loginRequest, verityTokenRequet } from "../api/auth";
 import Cookies from "js-cookie";
 
 export const AuthContext = createContext();
@@ -17,7 +17,6 @@ export const AuthProvider = ({ children }) => {
   const [loading, setLoading] = useState(true);
   const signup = async (user) => {
     try {
-      const res = await registerRequest(user);
       console.log(res.data);
       setUser(res.data);
       setIsAuthenticated(true);
