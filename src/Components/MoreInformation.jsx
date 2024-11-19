@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
-import areasDeportivas from '../assets/areasDeportivas'
+import moreInformationAreasDeportivas from '../assets/moreInformationAreasDeportivas'
+import { Header } from './Header'
+import '../component css/MoreInformation.css'
 const getInfomation = (id)=>{
-    const info = areasDeportivas.find((index)=>index.id === Number(id) )
+    const info = moreInformationAreasDeportivas.find((index)=>index.id === Number(id) )
     return info
 }
 export const MoreInformation = () => {
@@ -11,17 +13,35 @@ export const MoreInformation = () => {
     useEffect (()=>{
         setMoreInformation (getInfomation(params.id))
     },[])
-    console.log (moreInformation)
-     
+    console.log (Header)
+
   return (
     <>
     <main>
-        <h3>
-        {moreInformation?.title}
-        </h3>
-        <p>
-            {moreInformation?.description}
-        </p>
+        <Header/>
+        <div className='intro'>
+            <img src={moreInformation?.image1} alt="" />
+            <h2>
+                AREA {moreInformation?.title}
+            </h2>
+        </div>
+        <main className='info-section-especifict'>
+            <div className="info-section-areas">
+                <div className="info-izq-areas">
+                    <h3>
+                        Infraestructura
+                    </h3>
+                    <br />
+                    <p>
+                        {moreInformation?.description}
+                    </p>
+                </div>
+                <img src={moreInformation?.image} alt="" />
+            </div>
+            <div className="realidad-aumentada">
+                Aqui ira la realidad aumentada
+            </div>
+        </main>
     </main>
     </>
     
