@@ -43,6 +43,22 @@ function PiscinaAR() {
             personalizados para todas las edades y niveles de experiencia
           </p>
         </div>
+        <div>
+          <model-viewer
+            src="./Models/futbol_02.glb"
+            ar
+            ar-modes="scene-viewer quick-look webxr"
+            camera-controls
+          ></model-viewer>
+        </div>
+        <div>
+          <model-viewer
+            src="./Models/Fronton.glb"
+            ar
+            ar-modes="scene-viewer quick-look webxr"
+            camera-controls
+          ></model-viewer>
+        </div>
       </article>
     </>
   );
