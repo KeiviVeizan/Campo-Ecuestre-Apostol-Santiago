@@ -45,7 +45,7 @@ function PiscinaAR() {
         </div>
         <div>
           <model-viewer
-            src="./Models/futbol_02.glb"
+            src="./Models/establo_f.glb"
             ar
             ar-modes="scene-viewer quick-look webxr"
             camera-controls
@@ -53,7 +53,7 @@ function PiscinaAR() {
         </div>
         <div>
           <model-viewer
-            src="./Models/Fronton.glb"
+            src="./Models/basketball.glb"
             ar
             ar-modes="scene-viewer quick-look webxr"
             camera-controls
