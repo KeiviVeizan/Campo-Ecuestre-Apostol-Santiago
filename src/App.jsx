@@ -1,6 +1,20 @@
 import { useState } from 'react'
-import Section1 from './Components/Section1.jsx';
-import Section2 from './Components/Section2.jsx';
+import {
+  createBrowserRouter,
+  RouterProvider,
+} from "react-router-dom";
+import { HomeScreen } from './home/screens/home-screen.jsx';
+import { MoreInformation } from './Components/MoreInformation.jsx';
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <HomeScreen/>
+  },
+  {
+    path: "/areas-deportivas/:id",
+    element: <MoreInformation/>
+  },
+]);
 function App() {
   const [Menu, setMenu] = useState(false)
 
@@ -9,10 +23,13 @@ function App() {
   };
   return (
     <>    
-    <Section1/>
-    <Section2/>
+    <RouterProvider router={router} />
     </>
   )
 }
 
 export default App
+
+
+
+
