@@ -1,5 +1,5 @@
 import {useForm} from 'react-hook-form';
-// import {registerRequest} from '../api/auth';
+import {registerRequest} from '../api/auth';
 
 export function RegisterPage() {
   const {register, handleSubmit} = useForm()
