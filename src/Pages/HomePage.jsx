@@ -3,6 +3,7 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import { useAuth } from "../context/AuthContext";
 import { HomeScreen } from "../home/screens/home-screen";
+import RegisterPage from "./RegisterPage";
 function HomePage() {
   const [Menu, setMenu] = useState(false);
   const { isAuthenticated, logout, user } = useAuth();
@@ -63,6 +64,7 @@ function HomePage() {
         </div>
       </article>
       <HomeScreen/>
+      <RegisterPage/>
     </>
   );
 }

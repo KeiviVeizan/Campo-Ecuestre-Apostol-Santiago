@@ -9,7 +9,7 @@ export function RegisterPage() {
   });
 
  return (
-  <div className="max-w-md mx-auto p-6 bg-white rounded-md shadow-md">
+  <div className="max-w-md mx-auto p-6 bg-rounded-md shadow-md">
   <h2 className="text-center text-xl font-bold mb-6">Interesados</h2>
   <form onSubmit={onSubmit}>
     {/* Nombre */}
@@ -47,7 +47,7 @@ export function RegisterPage() {
           />
           <span className="ml-2 text-gray-700">Primer Plan</span>
         </label>
-        <label className="flex items-center">
+        {/* <label className="flex items-center">
           <input 
             type="radio" 
             {...register("plan", { required: true })} 
@@ -55,7 +55,7 @@ export function RegisterPage() {
             className="form-radio text-gray-600 focus:ring-gray-400"
           />
           <span className="ml-2 text-gray-700">Segundo Plan</span>
-        </label>
+        </label> */}
       </div>
     </div>
 
