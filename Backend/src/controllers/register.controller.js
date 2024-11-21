@@ -1,24 +1,18 @@
 import register from '../models/register.model.js'
 
-export const register = (req, res) => {
-    const {username, email, phone, plan} = req.body 
-    
+export const register = async (req, res) => {
+    const {email, phone, username} = req.body
+
     try {
-        
-    } catch (error) {
-        
-    }
-  
-    try {
-        const newInteresado = newInteresado({
+        const newInteresado = new User({
             username,
             email,
             phone,
             plan
-        });
-        //await newInteresado.save();
+        })
+        const userSaved = await newInteresado.save();
+        res.json(userSaved);
     } catch (error) {
-        console.log(error);        
+        console.log(error);
     }
-
-}
+};
