@@ -41,7 +41,7 @@ const moreInformationAreasDeportivas = [{
 {
     id: 6 ,
     title: "NATACIÓN",
-    description: "",
+    description: "Nuestra área de natación es uno de los lugares más populares para quienes buscan relajación y ejercicio. La piscina climatizada del Centro Ecuestre Apóstol Santiago permite su uso durante todo el año, ofreciendo un ambiente controlado y seguro tanto para principiantes como para nadadores experimentados. Ofrecemos clases de natación para diferentes edades y niveles, así como espacios dedicados al entrenamiento libre y actividades recreativas. La natación aquí es ideal para fortalecer el cuerpo, mejorar la resistencia y disfrutar de un momento refrescante en un entorno tranquilo y acogedor.",
     image:"/public/images/areas/Natacion.jpg",
     image1:"/images/areas/Natacion2.png",
     modelo3d: ""
@@ -49,7 +49,7 @@ const moreInformationAreasDeportivas = [{
 {
     id: 7 ,
     title: "TENIS",
-    description: "",
+    description: "En el área de tenis, disponemos de tres canchas de superficie dura y de tierra batida, equipadas con iluminación nocturna para maximizar el tiempo de juego. Además, ofrecemos clases impartidas por entrenadores profesionales y una zona de descanso para jugadores y espectadores.",
     image:"/public/images/areas/tenis.jpg",
     image1:"/images/areas/tenis1.jpg",
     modelo3d: ""
@@ -57,7 +57,7 @@ const moreInformationAreasDeportivas = [{
 {
     id: 8 ,
     title: "FUTBOL",
-    description: "",
+    description: "En el área de fútbol, ofrecemos dos canchas reglamentarias de césped natural, ideales para entrenamientos y torneos. Contamos con entrenadores calificados que brindan asesoría y entrenamientos personalizados para todas las edades y niveles de experiencia",
     image:"/public/images/areas/futbol.avif",
     image1:"/images/areas/futbol2.avif",
     modelo3d: ""

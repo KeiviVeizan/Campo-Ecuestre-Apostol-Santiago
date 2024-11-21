@@ -1,5 +1,4 @@
 .intro{
-    background-image:url('');
     display: flex;
     justify-content: center;
     align-items: center;
@@ -41,7 +40,7 @@
     align-items: center;
 }
 .info-izq-areas p{
-    max-width: 10rem;
+    max-width: 15rem;
 }
 .info-section-areas {
     display: flex;

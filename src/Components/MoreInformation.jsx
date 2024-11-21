@@ -36,7 +36,7 @@ export const MoreInformation = () => {
                         {moreInformation?.description}
                     </p>
                 </div>
-                <img src={moreInformation?.image} alt="" />
+                <img src={moreInformation?.image} alt="Imagen de las areas deportivas" />
             </div>
             <div className="realidad-aumentada">
                 Aqui ira la realidad aumentada

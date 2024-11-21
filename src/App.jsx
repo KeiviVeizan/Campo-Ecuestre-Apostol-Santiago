@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { Footer } from './Components/Footer.jsx';
 import {
   createBrowserRouter,
   RouterProvider,
@@ -24,6 +25,7 @@ function App() {
   return (
     <>    
     <RouterProvider router={router} />
+    <Footer/>
     </>
   )
 }
