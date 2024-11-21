@@ -9,6 +9,7 @@ const moreInformationAreasDeportivas = [{
 {
     id: 2 ,
     title: "GIMNASIO",
+    description: "La gimnasia es un deporte que involucra ejercicios físicos de fuerza, flexibilidad, equilibrio y coordinación. Existen varias disciplinas, como la gimnasia artística, rítmica, y acrobática, cada una con sus propios movimientos y rutinas específicas. Es una actividad que demanda control corporal, precisión y práctica constante para desarrollar habilidades complejas, tanto en suelo como en aparatos.",
     image:"/images/areas/gym.jpg",
     image1:"/images/areas/gym1.jpg",
     modelo3d: ""
@@ -16,6 +17,7 @@ const moreInformationAreasDeportivas = [{
 {
     id: 3 ,
     title: "FRONTON",
+    description: "Aquí en nuestro club, ofrecemos la oportunidad de practicar y disfrutar del frontón, un deporte de raqueta que combina agilidad, precisión y resistencia. Contamos con canchas modernas y un ambiente ideal tanto para principiantes como para jugadores avanzados. Nuestros instructores están listos para ayudarte a mejorar tus habilidades, ya sea que estés aprendiendo o quieras perfeccionar tu técnica. Además, organizamos torneos y eventos para que te diviertas y pongas a prueba tus habilidades en un entorno competitivo. ¡Ven y únete al Campo Ecuestre Apostol Santiago!",
     image:"/public/images/areas/fronton.avif",
     image1:"/images/areas/fronton1.jpg",
     modelo3d: ""
@@ -23,6 +25,7 @@ const moreInformationAreasDeportivas = [{
 {
     id: 4 ,
     title: "VOLEIBOL",
+    description: "En el Centro Ecuestre Apóstol Santiago, el voleibol es una actividad que combina deporte, diversión y camaradería. Contamos con canchas amplias y bien acondicionadas para la práctica tanto recreativa como competitiva. Los visitantes pueden participar en partidos organizados, torneos o entrenamientos personalizados, disfrutando de un entorno natural que invita al ejercicio al aire libre. Ya sea que busques mejorar tu técnica, fortalecer la comunicación en equipo o simplemente pasar un buen rato, nuestras instalaciones de voleibol están diseñadas para ofrecer una experiencia deportiva completa y estimulante.",
     image:"/public/images/areas/volei.jpg",
     image1:"/images/areas/volei1.jpg",
     modelo3d: ""
@@ -30,6 +33,7 @@ const moreInformationAreasDeportivas = [{
 {
     id: 5 ,
     title: "BASQUETBOL",
+    description: "En nuestro club, ofrecemos un espacio ideal para disfrutar y mejorar en el deporte del básquetbol, un deporte que promueve el trabajo en equipo, la velocidad y la precisión. Contamos con canchas de primer nivel y un equipo de entrenadores profesionales listos para ayudarte a desarrollar tus habilidades, sin importar si eres principiante o jugador experimentado. También organizamos ligas, torneos y entrenamientos personalizados para que puedas competir, aprender y divertirte.  ¡Ven y únete al Campo Ecuestre Apostol Santiago!",
     image:"/public/images/areas/basquet.jpg",
     image1:"/images/areas/basquet1.webp",
     modelo3d: ""
@@ -37,6 +41,7 @@ const moreInformationAreasDeportivas = [{
 {
     id: 6 ,
     title: "NATACIÓN",
+    description: "",
     image:"/public/images/areas/Natacion.jpg",
     image1:"/images/areas/Natacion2.png",
     modelo3d: ""
@@ -44,6 +49,7 @@ const moreInformationAreasDeportivas = [{
 {
     id: 7 ,
     title: "TENIS",
+    description: "",
     image:"/public/images/areas/tenis.jpg",
     image1:"/images/areas/tenis1.jpg",
     modelo3d: ""
@@ -51,6 +57,7 @@ const moreInformationAreasDeportivas = [{
 {
     id: 8 ,
     title: "FUTBOL",
+    description: "",
     image:"/public/images/areas/futbol.avif",
     image1:"/images/areas/futbol2.avif",
     modelo3d: ""
