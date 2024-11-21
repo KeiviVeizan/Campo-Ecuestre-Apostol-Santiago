@@ -1,0 +1,206 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+/*Para la pantalla más pequeña es de 320px */ 
+*{
+  margin: 0%;
+  padding: 0%;
+}
+/* body {
+  background-color: white;
+} */
+.inicio {
+  background-image: url('/public/images/img-principal.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position:10%;
+  height: 100vh;
+}
+.inicio::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5); /* Ajusta el color y opacidad aquí */
+  z-index: 1; /* Coloca esta capa detrás del contenido */
+}
+.inicio nav {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.button-menu {
+  display: none;
+  font-size: 24px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 4;
+  position: absolute;
+  right: 20px;
+  top: 20px;
+}
+
+.menu {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  gap: 20px;
+  z-index: 5;
+}
+
+.menu li a {
+  text-align: center;
+  text-decoration: none;
+  color: inherit;
+}
+@media (max-width: 768px) {
+  .button-menu {
+    display: block;
+  }
+
+  .menu {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: #333;
+    color: white;
+    transform: translateX(100%);
+    transition: transform 0.3s ease;
+    padding-top: 60px;
+    z-index: 6;
+  }
+  .menu.menu-open {
+    transform: translateX(0);
+  }
+
+  .menu li {
+    margin: 20px 0;
+  }
+}
+
+header h1,a,p, .header-bottom h1{
+  position: relative;
+  z-index: 2;
+  color: white;
+}
+
+.header-top li, a{
+  text-decoration: none;
+  font-size: 20px;
+  
+}
+.header-bottom{
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  z-index: 2;
+}
+.header-bottom h1{
+  font-size: 40px;
+  z-index: 2;
+  max-width: 90%;
+  font-family:"Myriad Pro Regular" ;
+}
+.header-bottom p{
+  font-size: 15px;
+  max-width: 90%;
+  font-family: sans-serif;
+}
+
+
+
+/*Responsive para todo tipo de pantallas*/
+/*Para celulares*/
+@media(min-width:375px){
+  .header-bottom h1{
+    font-size: 45px;
+  }
+}
+@media(min-width: 425px){
+  
+}
+
+/*Para Tablet*/
+@media(min-width: 768px){
+  .button-menu {
+    display: none;
+  }
+
+  .menu {
+    flex-direction: row;
+    position: static;
+    height: auto;
+    background: none;
+    transform: none;
+    padding-top: 0;
+    justify-content: flex-end; 
+    margin: 20px 10px;
+  }
+
+  .menu li, a {
+    margin: 0;
+    color: white;
+    font-family: "Archivo Black", sans-serif;
+  }
+}
+/*Para computadoras*/
+@media(min-width: 1024px){
+
+  .menu a{
+    font-size: 20px;
+    margin: 30px 30px;
+    transition: color, background-color, .5s;
+  }
+  .menu a:hover{
+    background-color: rgba(0, 0, 0, 0.5);
+    color: rgb(111, 205, 111);
+    padding: 15px 10px;
+    border-radius: 20px;
+    
+  }
+  .header-bottom{
+    height: 80vh;
+  }
+  .header-bottom h1{
+    font-size: 70px;
+    max-width: 70%;
+  }
+  .header-bottom p{
+    font-size: 20px;
+    font-family: "Myriad Regular";
+    max-width: 50%;
+  }
+}
+@media(min-width: 1440px){
+  .menu a{
+    font-size: 25px;
+  }
+  .header-bottom{
+    height: 80vh;
+  }
+  .header-bottom h1{
+    font-size: 90px;
+    max-width: 70%;
+  }
+  .header-bottom p{
+    font-size: 35px;
+    font-family: "Myriad Regular";
+    max-width: 50%;
+  }
+}
+@media(min-width: 2560px){
+  
+}
