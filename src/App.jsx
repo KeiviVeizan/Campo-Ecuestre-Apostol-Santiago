@@ -1,47 +1,35 @@
-import { useState } from "react";
-import "./App.css";
+import { useState } from 'react'
+import {
+  createBrowserRouter,
+  RouterProvider,
+} from "react-router-dom";
+import { HomeScreen } from './home/screens/home-screen.jsx';
+import { MoreInformation } from './Components/MoreInformation.jsx';
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <HomeScreen/>
+  },
+  {
+    path: "/areas-deportivas/:id",
+    element: <MoreInformation/>
+  },
+]);
 function App() {
-  const [Menu, setMenu] = useState(false);
+  const [Menu, setMenu] = useState(false)
 
-  const MenuNav = () => {
+  const MenuNav = () =>{
     setMenu(!Menu);
   };
   return (
-    <>
-      <article className="inicio">
-        <header>
-          <div className="header-top">
-            <nav>
-              <button className="button-menu" onClick={MenuNav}>
-                ☰
-              </button>
-              <ul className={`menu ${Menu ? "menu-open" : ""}`}>
-                <li>
-                  <a href="">Historia</a>
-                </li>
-                <li>
-                  <a href="">Planes</a>
-                </li>
-                <li>
-                  <a href="">Servicios</a>
-                </li>
-                <li>
-                  <a href="">Ingresar</a>
-                </li>
-              </ul>
-            </nav>
-          </div>
-        </header>
-        <div className="header-bottom">
-          <h1>Centro Ecuestre Apóstol Santiago S.A.</h1>
-          <p>
-            Entrena, diviértete y vive experiencias inolvidables en nuestro
-            campo ecuestre.
-          </p>
-        </div>
-      </article>
+    <>    
+    <RouterProvider router={router} />
     </>
-  );
+  )
 }
 
-export default App;
+export default App
+
+
+
+
