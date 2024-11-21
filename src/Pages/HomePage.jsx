@@ -31,13 +31,18 @@ function HomePage() {
                   {isAuthenticated ? (
                     <>
                       <li>
-                        <Link
+                        {/* <Link
                           to="/"
                           onClick={() => {
                             logout();
                           }}
                         >
                           Salir
+                        </Link> */}
+                                                <Link
+                          to="/Vista_Interesados"
+                        >
+                          Interesados
                         </Link>
                       </li>
                     </>
