@@ -24,8 +24,8 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(0, 0, 0, 0.5); /* Ajusta el color y opacidad aquí */
-  z-index: 1; /* Coloca esta capa detrás del contenido */
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1;
 }
 .inicio nav {
   display: flex;
@@ -162,14 +162,14 @@ header h1,a,p, .header-bottom h1{
   .menu a{
     font-size: 20px;
     margin: 30px 30px;
-    transition: color, background-color, .5s;
+    transition: transform, 500ms;
   }
   .menu a:hover{
     background-color: rgba(0, 0, 0, 0.5);
     color: rgb(111, 205, 111);
     padding: 15px 10px;
     border-radius: 20px;
-    
+    transform: scale(1.5);
   }
   .header-bottom{
     height: 80vh;

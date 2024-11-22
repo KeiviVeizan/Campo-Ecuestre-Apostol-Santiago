@@ -1,0 +1,85 @@
+footer {
+    background-color: rgb(10, 30, 10);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 150px;
+    width: 100%;
+}
+.Section-der{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+}
+.icons img{
+    width: 30px;
+    padding: 0px 10px;
+    margin-top: 20px;
+}
+.icons {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+.Section-izq img{
+    margin-bottom: 20px ;
+    width: 50px;
+}
+.Section-der h3{
+    color: white;
+    font-size: 12px;
+    text-align: center;
+}
+.Section-izq h3{
+    color: white;
+    font-size: 12px;
+    text-align: left;
+}
+.Section-izq {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+}
+@media(min-width:768px){
+    .Section-der h3{
+        font-size: 20px;
+    }
+    .icons img{
+        width: 40px;
+    }
+    .Section-izq h3{
+        font-size: 25px;
+    }
+    .Section-izq img{
+        width: 80px;
+    }
+    footer {
+        height: 200px;
+    }
+}
+@media(min-width: 1024px){
+    .Section-der img{
+        width: 50px;
+        transition: transform, 500ms;
+    }
+    .Section-der img:hover{
+        transform: scale(1.5);
+    }
+}
+@media(min-width: 1440px){
+    .Section-der img {
+        width: 60px;
+        margin:30px 15px;
+    }
+    .Section-der h3{
+        font-size: 30px;
+    }
+    footer{
+        height: 280px;
+    }
+}
