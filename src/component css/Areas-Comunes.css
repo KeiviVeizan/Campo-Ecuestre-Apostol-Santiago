@@ -60,8 +60,8 @@
 }
 
 .info-areas p{
-    font-size: 8px;
-    max-width: 10rem;
+    font-size: 6px;
+    max-width: 8rem;
 }
 .info-areas h3{
 
@@ -85,6 +85,16 @@
 @media (min-width: 375px){
     .info-areas {
         width: 350px;
+    }
+    .info-areas p{
+        font-size: 7px;
+        max-width: 10rem;
+    }
+    .info-areas a{
+        margin: 10;
+    }
+    .info-areas6 a{
+        margin-top: 8px;
     }
 }
 @media(min-width:425px){
@@ -112,7 +122,7 @@
         font-size: 25px;
     }
     .info-areas p{
-        font-size: 12px;
+        font-size: 10px;
         max-width: 90%;
     }
     .info-areas a{
@@ -133,9 +143,12 @@
         height: 400px;
     }
     .info-areas p{
-        font-size: 15px;
+        font-size: 12px;
     }
     .section2-areas h2{
         font-size: 80px;
+    }
+    .info-areas6 a{
+        margin-top: 20px;
     }
 }

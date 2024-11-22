@@ -1,3 +1,11 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+/* body {
+  background-color: #202020;
+  color: white;
+} */
+
 body{
     background: linear-gradient(to top, #99B09B, #F7F7F7);	
 }

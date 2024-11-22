@@ -3,7 +3,7 @@ import '../component css/Header.css'
 export const Header = () => {
   return (
     <header>
-        <div className='header-top'>
+        <div className='headerr-top'>
         <nav>
             <ul>
             <li><a href="">Historia</a></li>

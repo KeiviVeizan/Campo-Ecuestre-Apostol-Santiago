@@ -19,6 +19,11 @@ footer {
     padding: 0px 10px;
     margin-top: 20px;
 }
+.icons {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
 .Section-izq img{
     margin-bottom: 20px ;
     width: 50px;
@@ -55,5 +60,26 @@ footer {
     }
     footer {
         height: 200px;
+    }
+}
+@media(min-width: 1024px){
+    .Section-der img{
+        width: 50px;
+        transition: transform, 500ms;
+    }
+    .Section-der img:hover{
+        transform: scale(1.5);
+    }
+}
+@media(min-width: 1440px){
+    .Section-der img {
+        width: 60px;
+        margin:30px 15px;
+    }
+    .Section-der h3{
+        font-size: 30px;
+    }
+    footer{
+        height: 280px;
     }
 }

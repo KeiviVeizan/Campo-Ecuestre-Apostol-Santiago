@@ -13,7 +13,7 @@ export const Footer = () => {
                 Visitanos en nuestras redes sociales
             </h3>
             <div className="icons">
-                <a href="https://www.facebook.com/profile.php?id=61560889510956"><img src="/public/images/facebook.svg" alt="Facebook" /></a>
+                <a className='facebook' href="https://www.facebook.com/profile.php?id=61560889510956"><img src="/public/images/facebook.svg" alt="Facebook" /></a>
                 <a href="https://wa.link/q71ukt"><img src="/public/images/whatsapp.svg" alt="Whatsapp" /></a>
 
             </div>            

@@ -48,3 +48,9 @@
     justify-content: space-evenly;
     width: 50%;
 }
+
+/* estilo para ventana de modelo 3D */
+model-viewer{
+    height: 300px;
+    width: 500px;
+}
