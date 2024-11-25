@@ -11,10 +11,11 @@ const userSchema = new mongoose.Schema({
         type: String, required: true, trim: true
     },
     plan: {
-        type: String, required: true, trim: true
+        type: String, required: true, enum: ['Primer Plan', 'Segundo Plan'], // Ajustado para coincidir con los valores del frontend
+        trim: true
     }
 }, {
     timestamps: true
 })
 
-export default mongoose.model('User', userSchema)
+export default mongoose.model('Interested', userSchema)
