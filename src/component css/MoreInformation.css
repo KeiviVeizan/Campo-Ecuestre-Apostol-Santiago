@@ -39,8 +39,12 @@
     justify-content: center;
     align-items: center;
 }
+.info-izq-areas h3{
+    color: gray;
+}
 .info-izq-areas p{
     max-width: 15rem;
+    color: black;
 }
 .info-section-areas {
     display: flex;

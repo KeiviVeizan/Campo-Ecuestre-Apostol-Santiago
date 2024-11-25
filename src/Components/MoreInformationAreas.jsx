@@ -19,6 +19,7 @@ export const MoreInformationAreas = () => {
 
     return (
         <>
+        <Header/>
         <main>
             <h1>
                 {moreInformationAreas?.title}

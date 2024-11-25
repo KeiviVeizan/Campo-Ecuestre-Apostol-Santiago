@@ -8,6 +8,7 @@ import RegisterPage from "./Pages/RegisterPage.jsx";
 import { MoreInformation } from "./Components/MoreInformation.jsx";
 import { Footer } from "./Components/Footer.jsx";
 import { MoreInformationAreas } from "./Components/MoreInformationAreas.jsx";
+import { Header } from "./Components/Header.jsx";
 function App() {
   return (
     <AuthProvider>

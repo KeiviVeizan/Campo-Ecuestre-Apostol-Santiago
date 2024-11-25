@@ -2,6 +2,7 @@ import React from 'react'
 import areasComunes from '../assets/areasComunes'
 import '../component css/Areas-Comunes.css'
 import { NavLink } from 'react-router-dom'
+import { Header } from './Header'
 function Section5() {
   return (
     <main className='section5-areas'>

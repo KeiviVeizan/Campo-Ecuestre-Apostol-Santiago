@@ -26,6 +26,7 @@
   bottom: 0;
   background-color: rgba(0, 0, 0, 0.5);
   z-index: 1;
+  height: 100vh;
 }
 .inicio nav {
   display: flex;
@@ -152,7 +153,7 @@ header h1,a,p, .header-bottom h1{
 
   .menu li, a {
     margin: 0;
-    color: white;
+    color: black;
     font-family: "Archivo Black", sans-serif;
   }
 }
