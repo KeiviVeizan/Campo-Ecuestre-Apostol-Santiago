@@ -24,7 +24,7 @@ export const Header = () => {
           <li>
             <a href="">Servicios</a>
           </li>
-          <ul className="flex gap-x-2">
+          <ul className="flex gap-x-2 text-center">
             {isAuthenticated ? (
               <>
                 <li>

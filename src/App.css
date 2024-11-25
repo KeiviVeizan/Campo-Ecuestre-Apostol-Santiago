@@ -7,9 +7,6 @@
   margin: 0%;
   padding: 0%;
 }
-/* body {
-  background-color: white;
-} */
 .inicio {
   background-image: url('/public/images/img-principal.svg');
   background-repeat: no-repeat;
@@ -72,12 +69,15 @@
     right: 0;
     width: 100%;
     height: 100vh;
-    background-color: #333;
+    background-color: #304e35;
     color: white;
     transform: translateX(100%);
     transition: transform 0.3s ease;
     padding-top: 60px;
     z-index: 6;
+  }
+  nav {
+    text-align: center;
   }
   .menu.menu-open {
     transform: translateX(0);
@@ -112,8 +112,8 @@ header h1,a,p, .header-bottom h1{
 .header-bottom h1{
   font-size: 40px;
   z-index: 2;
-  max-width: 90%;
-  font-family:"Myriad Pro Regular" ;
+  max-width: 95%;
+  font-family:"Archivo Black", sans-serif ;
 }
 .header-bottom p{
   font-size: 15px;
