@@ -7,7 +7,7 @@ import NotFound from "./Pages/NotFound.jsx";
 import RegisterPage from "./Pages/RegisterPage.jsx";
 import { MoreInformation } from "./Components/MoreInformation.jsx";
 import { Footer } from "./Components/Footer.jsx";
-
+import { MoreInformationAreas } from "./Components/MoreInformationAreas.jsx";
 function App() {
   return (
     <AuthProvider>
@@ -15,6 +15,7 @@ function App() {
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/areas-deportivas/:id" element={<MoreInformation/>}/>
+          <Route path="/areas-comunes/:id" element= {<MoreInformationAreas/>}/>
           <Route path="/login" element={<LoginPage />} />
           <Route path="/notfound" element={<NotFound />} />
           {/* <Route path="/register" element={<RegisterPage />} /> */}

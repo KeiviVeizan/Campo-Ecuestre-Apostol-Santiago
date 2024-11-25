@@ -20,7 +20,7 @@ export const MoreInformation = () => {
     <main>
         <Header/>
         <div className='intro'>
-            <img src={moreInformation?.image1} alt="" />
+            <img src={moreInformation?.image1} alt="Imagen de las areas deportivas" />
             <h2>
                 AREA {moreInformation?.title}
             </h2>
