@@ -32,13 +32,13 @@
     
 }
 
-@media(min-width:768px ){
+@media(min-width:600px ){
     .section3-info{
         justify-content: center;
         width: 100;
         background-size: 1000px;
         height: 300px;
-        margin: 50px;
+        margin: 35px;
     }
     .section3-info h3{
         font-size: 30px;

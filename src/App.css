@@ -141,45 +141,10 @@ header h1,a,p, .header-bottom h1{
 
 /*Para Tablet*/
 @media(min-width: 768px){
-  .button-menu {
-    display: none;
-  }
 
-  .menu {
-    flex-direction: row;
-    position: static;
-    height: auto;
-    background: none;
-    transform: none;
-    padding-top: 0;
-    justify-content: flex-end; 
-    margin: 20px 10px;
-    width: 95%;
-  }
-
-  .menu li, a {
-    margin: 0;
-    color: #0B1215;
-    font-family: "Archivo Black", sans-serif;
-  }
 }
 /*Para computadoras*/
 @media(min-width: 1024px){
-  .menu {
-    width: 97%;
-  }
-  .menu a{
-    font-size: 20px;
-    margin: 30px 30px;
-    transition: transform, 500ms;
-  }
-  .menu a:hover{
-    background-color: rgba(0, 0, 0, 0.5);
-    color: rgb(111, 205, 111);
-    padding: 15px 10px;
-    border-radius: 20px;
-    transform: scale(1.5);
-  }
   .header-bottom{
     height: 80vh;
   }
@@ -194,9 +159,6 @@ header h1,a,p, .header-bottom h1{
   }
 }
 @media(min-width: 1440px){
-  .menu a{
-    font-size: 25px;
-  }
   .header-bottom{
     height: 80vh;
   }

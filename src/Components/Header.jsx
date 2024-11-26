@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { useAuth } from "../context/AuthContext";
+import '../component css/Header.css'
 export const Header = () => {
   const [Menu, setMenu] = useState(false);
   const { isAuthenticated, logout, user } = useAuth();
@@ -28,7 +29,7 @@ export const Header = () => {
           <li>
             <a href="#section2">Servicios</a>
           </li>
-          <ul className="flex gap-x-2 text-center">
+          
             {isAuthenticated ? (
               <>
                 <li>
@@ -49,7 +50,7 @@ export const Header = () => {
                 </li>
               </>
             )}
-          </ul>
+          
         </ul>
       </nav>
     </div>

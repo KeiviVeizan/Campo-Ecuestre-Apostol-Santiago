@@ -1,3 +1,11 @@
+.section3-info h3{
+    font-size: 13px;
+    font-family: "Archivo Black", sans-serif;
+}
+.section3-info a{
+    padding: 5px 10px;
+    font-size: 15px;
+}
 .section-planes{
     margin-top: 90px;
     display: flex;
@@ -51,6 +59,14 @@
     font-size: 20px;
 }
 @media(min-width: 375px){
+    .section3-info h3{
+        font-size: 15px;
+        font-family: "Archivo Black", sans-serif;
+    }
+    .section3-info a{
+        padding: 5px 10px;
+        font-size: 20px;
+    }
     .section-planes h2{
         font-size: 22px;
     }
@@ -67,6 +83,14 @@
     }
 }
 @media(min-width:600px){
+    .section3-info h3{
+        font-size: 22px;
+        font-family: "Archivo Black", sans-serif;
+    }
+    .section3-info a{
+        padding: 5px 10px;
+        font-size: 25px;
+    }
     .section-planes{
         margin-top: 20px;
     }
@@ -88,6 +112,14 @@
 }
 
 @media(min-width:1024px){
+    .section3-info h3{
+        font-size: 25px;
+        font-family: "Archivo Black", sans-serif;
+    }
+    .section3-info a{
+        padding: 5px 10px;
+        font-size: 25px;
+    }
     .section-planes{
         margin-top: 20px;
     }
@@ -115,6 +147,16 @@
         margin-bottom: 20px;
     }
     .section-planes1 h3{
+        font-size: 30px;
+    }
+}
+@media(min-width:1440px){
+    .section3-info h3{
+        font-size: 30px;
+        font-family: "Archivo Black", sans-serif;
+    }
+    .section3-info a{
+        padding: 10px 20px;
         font-size: 30px;
     }
 }
