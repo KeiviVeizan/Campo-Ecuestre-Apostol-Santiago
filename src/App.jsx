@@ -10,6 +10,8 @@ import { Footer } from "./Components/Footer.jsx";
 import { MoreInformationAreas } from "./Components/MoreInformationAreas.jsx";
 import { Header } from "./Components/Header.jsx";
 import { PlanesPage } from "./Pages/PlanesPage.jsx";
+import AdminPage from "./Pages/AdminPage.jsx";
+
 function App() {
   return (
     <AuthProvider>
@@ -22,6 +24,8 @@ function App() {
           <Route path="/notfound" element={<NotFound />} />
           <Route path ="/planes" element={<PlanesPage/>}/>
           {/* <Route path="/register" element={<RegisterPage />} /> */}
+          <Route path="/register" element={<RegisterPage />} />
+          <Route path="/admin" element={<AdminPage />}/>
           <Route path="*" element={<Navigate to="notfound" replace />} />
           {/* <Route element={<ProtectedRoute />}>
               <Route path="/Vista_Interesados" element={<Vista_Interesados />} />
