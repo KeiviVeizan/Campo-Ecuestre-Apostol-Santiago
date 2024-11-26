@@ -5,6 +5,7 @@ import { AuthProvider } from "./context/AuthContext.jsx";
 import HomePage from "./Pages/HomePage.jsx";
 import NotFound from "./Pages/NotFound.jsx";
 import RegisterPage from "./Pages/RegisterPage.jsx";
+import AdminPage from "./Pages/AdminPage.jsx";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
           <Route path="/login" element={<LoginPage />} />
           <Route path="/notfound" element={<NotFound />} />
           <Route path="/register" element={<RegisterPage />} />
+          <Route path="/admin" element={<AdminPage />}/>
           <Route path="*" element={<Navigate to="notfound" replace />} />
         </Routes>
       </BrowserRouter>
