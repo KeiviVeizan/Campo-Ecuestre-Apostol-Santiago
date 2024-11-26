@@ -3,7 +3,7 @@ import '../component css/Card-info.css'
 import extraInformationCard from '../assets/extraInformationCard'
 function Section1() {
   return (
-    <main>
+    <main className='main-info'>
       <h2>
         Haste socio del mejor campo ecuestre de la ciudad
       </h2>
