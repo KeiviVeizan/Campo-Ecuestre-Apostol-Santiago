@@ -1,154 +1,113 @@
-*{
-    padding: 0%;
-    margin: 0%;
-}
-.section2-areas {
-    background-color: #131D14;
-    color: white;
-}
-.section2-areas h2{
-    padding: 30px 0px 10px;
-    font-size: 30px;
-}
-.section2-info{
+.section5-info {
     display: grid;
     grid-template-columns: repeat(1, minmax(0, 1fr));
     place-items: center;
 }
-.Card-Info-areas{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+.section5-areas h2{
+    margin-top:20px ;
+    font-size: 30px;
     text-align: center;
-    width: 50%;
 }
-.info-areas{
+.info-areas-comunes{
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    width: 300px;
+    margin-top: 40px;
+}
+.info-areas-comunes1{
     display: flex;
     flex-direction: row;
-    background-color: black;
-    margin: 20px 10px;
-    justify-content: space-evenly;
-    border-radius: 30px;
-    width: 300px;
-    height: 250px;
-    
+    text-align: left;
 }
-.info-areas2, .info-areas4, .info-areas6, .info-areas8{
+.info-areas-comunes2{
     flex-direction: row-reverse;
+    justify-content: space-evenly;
+    text-align: right;
 }
-.info-areas img {
+.Card-Info-Areas-Comunes{
     width: 50%;
-    height: 250px;
+    height: 100%;
+}
+.info-areas-comunes h3{
+    line-height: 80px;
+    font-size: 20px;
+}
+.info-areas-comunes p{
+    max-width: 90%;
+    font-size: 12px;
+    color: black;
+}
+.info-areas-comunes1 p{
+    text-align: left;
+}
+.info-areas-comunes2 p{
+    max-width: 100%;
+    text-align: right;
+}
+.info-areas-comunes img{
+    width: 120px; 
+    height: 300px;
     object-fit: cover;
+    border-radius: 10px;
+    object-position: -20px;
+    box-shadow: 0px 0px 20px 10px gray ;
 }
-
-.info-areas2 img,
-.info-areas4 img,
-.info-areas6 img,
-.info-areas8 img {
-    border-top-left-radius: 30px;
-    border-bottom-left-radius: 30px;
-}
-
-.info-areas1 img,
-.info-areas3 img,
-.info-areas5 img,
-.info-areas7 img {
-    border-top-right-radius: 30px;
-    border-bottom-right-radius: 30px;
-}
-
-.info-areas p{
-    font-size: 6px;
-    max-width: 8rem;
-}
-.info-areas h3{
-
-    font-size: 15px;
-    line-height: 50px;
-}
-
-.info-areas a{
-    text-decoration: none;
-    color: #131D14;
-    padding: 5px 2px;
-    background-color: white;
-    font-size: 8px;
-    margin-top: 30px;
-    border-radius: 5px;
-}
-.info-areas a:hover{
+.info-areas-comunes a{
     color: white;
-    background-color: #131D14;
+    background-color: #011222;
+    font-size: 15px;
+    top: 20px;
+    padding: 10px 5px;
 }
-@media (min-width: 375px){
-    .info-areas {
-        width: 350px;
+@media(min-width:375px){
+    .info-areas-comunes{
+        width: 370px;
     }
-    .info-areas p{
-        font-size: 7px;
-        max-width: 10rem;
+    .info-areas-comunes img{
+        width: 150px;
+        height: 350px;
     }
-    .info-areas a{
-        margin: 10;
-    }
-    .info-areas6 a{
-        margin-top: 8px;
-    }
-}
-@media(min-width:425px){
-    .info-areas {
-        width: 380px;
-    }
-}
-
-@media (min-width: 1024px){
-    .section2-info {
-        grid-template-columns: repeat(2, minmax(0, 1fr));;
-    }
-    .section2-areas {
-        padding-bottom: 60px;
-    }
-    .section2-areas h2{
-        padding: 50px 0px 30px;
-        font-size: 50px;
-    }
-    .info-areas {
-        width: 480px;
-        height: 380px;
-    }
-    .info-areas h3{
+    .info-areas-comunes h3{
         font-size: 25px;
     }
-    .info-areas p{
-        font-size: 10px;
-        max-width: 90%;
-    }
-    .info-areas a{
-        padding: 20px;
+    .info-areas-comunes p{
         font-size: 15px;
     }
-    .info-areas img {
-        height: 380px;
+}
+@media(min-width: 600px){
+    .info-areas-comunes{
+        width: 600px;
     }
-
+    .info-areas-comunes img{
+        width: 280px;
+    }
+}
+@media(min-width:1024px){
+    .section5-areas h2{
+        font-size: 50px;
+    }
+    .info-areas-comunes{
+        width: 400px;
+    }
+    .section5-info{
+        grid-template-columns: repeat(2, minmax(0, 1fr));;
+    }
+    .info-areas-comunes img{
+        width: 200px;
+    }
 }
 @media(min-width:1440px){
-    .info-areas{
-        width: 700px;
-        height: 400px;
-    }
-    .info-areas img {
-        height: 400px;
-    }
-    .info-areas p{
-        font-size: 12px;
-    }
-    .section2-areas h2{
+    .section5-areas h2{
         font-size: 80px;
     }
-    .info-areas6 a{
-        margin-top: 20px;
+    .info-areas-comunes{
+        width: 700px;
+    }
+    .info-areas-comunes h3{
+        font-size: 40px;
+    }
+    .info-areas-comunes p{
+        font-size: 20px;
     }
 }

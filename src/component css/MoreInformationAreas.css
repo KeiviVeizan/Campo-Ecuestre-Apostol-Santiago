@@ -1,0 +1,118 @@
+.intro-a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.intro-a img{
+    width: 100%;
+    height: 100px;
+    object-fit: cover;
+    filter: brightness(50%);
+    z-index: -1;
+    margin-top: 80px;
+}
+.intro-a h2{
+    z-index: 1;
+    position: absolute;
+    color: white;
+    font-family: "Myriad Pro Regular", sans-serif;
+    font-size: 30px;
+    display: grid;
+    top: 90px;
+    text-align: center;
+}
+.info-section-especifict-a{
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    margin: 50px 0px;
+}
+.info-section-especifict-a img{
+    width: 150px;
+    height: 300px;
+    object-fit: cover;
+}
+.info-izq-areas-a {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.info-izq-areas-a h3{
+    color: gray;
+    font-family:"Archivo Black",sans-serif;
+}
+.info-izq-areas-a p{
+    max-width: 12rem;
+    color: black;
+    font-size: 12px;
+    font-family: "Kanit", serif;
+    font-style: normal;
+}
+.info-section-areas-a {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    margin-top: 20px;
+}
+
+/* estilo para ventana de modelo 3D */
+model-viewer{
+    width: 300px;
+    box-shadow: 0px 5px 20px 10px gray;
+}
+@media(min-width: 600px){
+    .intro-a img{
+        margin-top: 0px;
+        height: 200px;
+    }
+    .intro-a h2{
+        top: 35px;
+        font-size: 60px;
+    }
+    .info-izq-areas-a p{
+        font-size: 15px;
+    }
+    .info-izq-areas-a h3{
+        font-size: 25px;
+    }
+}
+@media(min-width: 1024px){
+    .intro-a img{
+        margin-top: 0px;
+        height: 200px;
+    }
+    .intro-a h2{
+        top: 35px;
+        font-size: 60px;
+    }
+    .info-izq-areas-a p{
+        font-size: 20px;
+        max-width: 20rem;
+    }
+    .info-izq-areas-a h3{
+        font-size: 25px;
+    }
+}
+@media(min-width:1440px){
+    .info-section-especifict-a {
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+    .info-section-especifict-a img{
+        width: 200px;
+        height: 400px;
+    }
+    .info-izq-areas-a p{
+        max-width: 15rem;
+    }
+    .info-section-areas-a{
+        width: 50%;
+    }
+}
+

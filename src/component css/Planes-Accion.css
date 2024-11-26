@@ -1,0 +1,120 @@
+.section-planes{
+    margin-top: 90px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.section-planes h2{
+    font-size: 20px;
+    font-family: "Archivo Black", sans-serif;
+}
+.section-planes1{
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.info-planes {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 30px 0px;
+    padding: 20px 10px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 30px 5px rgb(75, 96, 75);
+    width: 250px;
+    transition: transform, 500ms;
+}
+.info-planes:hover{
+    background-color: #171717;
+    color: white;
+    transform: scale(1.1);
+}
+.info-planes img{
+    width: 200px;
+    border-radius: 10px;
+}
+.Card-Info-planes{
+    text-align: center;
+    font-size: 12px;;
+}
+.Card-Info-planes li{
+    text-align: left;
+}
+.info-planes h3{
+    margin-bottom: 20px;
+    font-size: 20px;
+}
+@media(min-width: 375px){
+    .section-planes h2{
+        font-size: 22px;
+    }
+    .info-planes {
+        width: 300px;
+    }
+}
+@media(min-width:425px){
+    .section-planes h2{
+        font-size: 25px;
+    }
+    .info-planes {
+        width: 350px;
+    }
+}
+@media(min-width:600px){
+    .section-planes{
+        margin-top: 20px;
+    }
+    .section-planes h2{
+        font-size: 40px;
+    }
+    .info-planes {
+        width: 400px;
+    }
+    .info-planes li{
+        font-size: 18px;
+    }
+    .info-planes2 li{
+        margin-left: 40px;
+    }
+    .info-planes img{
+        margin-bottom: 20px;
+    }
+}
+
+@media(min-width:1024px){
+    .section-planes{
+        margin-top: 20px;
+    }
+    .section-planes h2{
+        font-size: 40px;
+    }
+    .section-planes1{
+        width:100%;
+        flex-direction: row;
+        justify-content: space-evenly;
+        margin-bottom: 50px;
+    }
+    .info-planes {
+        width: 450px;
+        height: 500px;
+    }
+    .info-planes li{
+        font-size: 22px;
+    }
+    .info-planes2 li{
+        margin-left: 30px;
+    }
+    .info-planes img{
+        width: 350px;
+        margin-bottom: 20px;
+    }
+    .section-planes1 h3{
+        font-size: 30px;
+    }
+}

@@ -1,5 +1,6 @@
 import React from 'react'
 import '../component css/PlanDeAcciones.css'
+import { Link } from 'react-router-dom'
 export const Section3 = () => {
   return (
     <>
@@ -7,7 +8,7 @@ export const Section3 = () => {
         <h3>
         Ser socio del Centro Ecuestre Apóstol Santiago es formar parte de un estilo de vida exclusivo, diseñado para el disfrute y bienestar de toda la familia.
         </h3>
-        <a href="/">Ver acciones</a>
+        <Link to="/planes">Planes</Link>
     </section>
     </>
   )

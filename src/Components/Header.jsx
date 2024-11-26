@@ -16,13 +16,17 @@ export const Header = () => {
         </button>
         <ul className={`menu ${Menu ? "menu-open" : ""}`}>
           <li>
-            <a href="">Historia</a>
+            <Link to="/"> 
+              Inicio
+             </Link>
           </li>
           <li>
-            <a href="">Planes</a>
+            <Link to="/planes">
+              Planes
+            </Link>
           </li>
           <li>
-            <a href="">Servicios</a>
+            <a href="#section2">Servicios</a>
           </li>
           <ul className="flex gap-x-2 text-center">
             {isAuthenticated ? (

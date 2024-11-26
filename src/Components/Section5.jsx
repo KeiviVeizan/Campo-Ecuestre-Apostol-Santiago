@@ -10,14 +10,14 @@ function Section5() {
             Areas Comunes
         </h2>
         <section className='section5-info'>
-              {areasComunes.map((areas) => (
-                  <div key={areas.id} className={`info-areas info-areas${areas.id}`}>
-                      <div className='Card-Info-areas'>
-                        <h3>{areas.title}</h3>
-                        <p>{areas.description}</p>
-                        <NavLink to={`/areas-comunes/${areas.id}`}>Más información</NavLink>
+              {areasComunes.map((areasc) => (
+                  <div key={areasc.id} className={`info-areas-comunes info-areas-comunes${areasc.id}`}>
+                      <div className='Card-Info-Areas-Comunes'>
+                        <h3>{areasc.title}</h3>
+                        <p>{areasc.description}</p>
+                        <NavLink to={`/areas-comunes/${areasc.id}`}>Más información</NavLink>
                       </div>
-                      {areas.image && <img src={areas.image} alt="Areas Deportivas" />}
+                      {areasc.image && <img src={areasc.image} alt="Areas Deportivas" />}
                       
                   </div>
               ))}

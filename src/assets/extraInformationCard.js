@@ -1,6 +1,6 @@
 const extraInformationCard = [{
     id:1,
-    description: "EL CENTRO ECUESTRE APÓSTOL SANTIAGO S.A. ES UNA SOCIEDAD ANÓNIMA CONCEBIDA POR LA INICIATIVA DE UN GRUPO DE OFICIALES REUNIDOS Y UNIDOS POR EL AMOR AL CABALLO, QUE CREYÓ FIRMEMENTE EN LA CONSOLIDACIÓN DE UNA SOCIEDAD DE CARÁCTER DEPORTIVO SOCIAL Y CULTURAL QUE PRINCIPALMENTE FOMENTA LA PRÁCTICA DE LOS DEPORTES ECUESTRES A TRAVÉS DE: LA ENSEÑANZA, ORGANIZACIÓN Y PARTICIPACIÓN EN EVENTOS LOCALES NACIONALES E INTERNACIONALES ​PROMOVIENDO Y DESARROLLANDO ENTRE SUS ASOCIADOS ACTIVIDADES DE CARÁCTER SOCIAL, CULTURAL Y DEPORTIVO ENMARCADOS EN PRINCIPIOS DE HERMANDAD SOLIDARIDAD Y PRINCIPALMENTE EN EL RESPETO QUE CADA SER HUMANO DEBE TENER CON SUS SEMEJANTES​",
+    description: "el centro ecuestre apóstol santiago s.a. es una sociedad anónima concebida por la iniciativa de un grupo de oficiales reunidos y unidos por el amor al caballo, que creyó firmemente en la consolidación de una sociedad de carácter deportivo social y cultural que principalmente fomenta la práctica de los deportes ecuestres a través de: la enseñanza, organización y participación en eventos locales nacionales e internacionales ​promoviendo y desarrollando entre sus asociados actividades de carácter social, cultural y deportivo enmarcados en principios de hermandad solidaridad y principalmente en el respeto que cada ser humano debe tener con sus semejantes​",
     images: "/public/images/img1-page1.avif"
 },
 {

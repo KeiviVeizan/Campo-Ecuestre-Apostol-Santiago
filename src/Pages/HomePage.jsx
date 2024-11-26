@@ -18,7 +18,6 @@ function HomePage() {
         </div>
       </article>
       <HomeScreen/>
-      <RegisterPage/>
     </>
   );
 }
