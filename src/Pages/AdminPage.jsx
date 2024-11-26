@@ -26,16 +26,12 @@ const InterestedList = () => {
           {interested.map((person, index) => (
             <div
               key={index}
-              className="flex justify-between p-4 bg-white rounded-md shadow-sm border"
+              className="grid grid-cols-4 gap-4 bg-white p-4 rounded-md shadow-sm border-b"
             >
-              <div className="flex justify-between">
-                <span className="font-medium">{person.name}</span>
-                <span>{person.phone}</span>
-              </div>
-              <div className="flex justify-between mt-2">
-                <span className="text-gray-600">{person.email}</span>
-                <span className="font-medium text-blue-600">{person.plan}</span>
-              </div>
+              <span className="text-black font-medium">{person.username}</span> {/* Cambié "name" por "username" */}
+              <span className="text-black">{person.phone}</span>
+              <span className="text-black">{person.email}</span>
+              <span className="text-black font-medium text-blue-600">{person.plan}</span>
             </div>
           ))}
         </div>
