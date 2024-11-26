@@ -15,7 +15,7 @@ function LoginPage() {
   });
 
   useEffect(() => {
-    if (isAuthenticated) navigate("/");
+    if (isAuthenticated) navigate("/admin");
   }, [isAuthenticated]);
   return (
     <div className="flex h-screen">
