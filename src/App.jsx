@@ -12,6 +12,23 @@ import { Header } from "./Components/Header.jsx";
 import { PlanesPage } from "./Pages/PlanesPage.jsx";
 import AdminPage from "./Pages/AdminPage.jsx";
 import ProtectedRoute from "./ProtectedRoute.jsx";
+import { ChatBot } from "./bot/Chatbot.jsx";
+// import config from "./bot/config.js";
+// import MessageParser from "./bot/MessageParser.jsx";
+// import ActionProvider from './bot/ActionProvider.jsx';
+// import Chatbot from 'react-chatbot-kit'
+// import 'react-chatbot-kit/build/main.css'
+// const MyComponent = () => {
+//   return (
+//     <div>
+//       <Chatbot
+//         config={config}
+//         messageParser={MessageParser}
+//         actionProvider={ActionProvider}
+//       />
+//     </div>
+//   );
+// };
 function App() {
   return (
     <AuthProvider>
@@ -30,6 +47,7 @@ function App() {
           </Route>
         </Routes>
         <Footer />
+        <ChatBot/>
       </BrowserRouter>
     </AuthProvider>
   );
