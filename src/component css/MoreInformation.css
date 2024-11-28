@@ -111,5 +111,9 @@ model-viewer{
     .info-section-areas{
         width: 50%;
     }
+    model-viewer{
+        width: 500px;
+        height: 500px;
+    }
 }
 
