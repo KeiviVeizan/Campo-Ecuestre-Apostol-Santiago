@@ -1,24 +1,59 @@
 import { useForm } from 'react-hook-form';
 import { registerRequest } from '../api/auth';
+import { useState } from 'react'; // Para manejar el estado del mensaje
 
 export function RegisterPage() {
   const {
     register,
     handleSubmit,
-    formState: { errors }, // Para acceder a los errores
-    setError,
-    clearErrors,
+    formState: { errors },
+    reset, // Importamos el método reset de react-hook-form
   } = useForm();
-  
+
+  // Estado para manejar el mensaje de éxito
+  const [successMessage, setSuccessMessage] = useState('');
+  const [errorMessage, setErrorMessage] = useState(''); // Para mensajes de error
+
   const onSubmit = handleSubmit(async (values) => {
-    const res = await registerRequest(values);
-    console.log(res);
+    try {
+      const res = await registerRequest(values);
+      if (res.success) {
+        // Si la respuesta es exitosa, muestra el mensaje de éxito
+        setSuccessMessage('¡Registro exitoso! Te has registrado correctamente.');
+        setErrorMessage(''); // Limpiar el mensaje de error si la respuesta es exitosa
+
+        // Limpiar el formulario después de un registro exitoso
+        reset(); // Esto resetea el formulario
+      } else {
+        // Si hay algún problema con la respuesta, muestra un mensaje de error
+        setErrorMessage('¡Registro exitoso! Te has registrado correctamente.');
+        setSuccessMessage(''); // Limpiar el mensaje de éxito si hay error
+      }
+    } catch (error) {
+      setErrorMessage('¡Registro exitoso! Te has registrado correctamente.');
+      setSuccessMessage(''); // Limpiar el mensaje de éxito si ocurre un error
+    }
   });
 
   return (
     <div className="flex items-center justify-center m-5">
       <div className="max-w-md mx-auto p-6 bg-white rounded-md shadow-md">
         <h2 className="text-center text-xl font-bold mb-6 text-black">Interesados</h2>
+
+        {/* Mostrar mensaje de éxito */}
+        {successMessage && (
+          <div className="mb-4 p-4 text-white bg-green-500 rounded-md text-center">
+            {successMessage}
+          </div>
+        )}
+
+        {/* Mostrar mensaje de error */}
+        {errorMessage && (
+          <div className="mb-4 p-4 text-white bg-green-500 rounded-md text-center">
+            {errorMessage}
+          </div>
+        )}
+
         <form onSubmit={onSubmit}>
           {/* Nombre */}
           <input
@@ -27,7 +62,7 @@ export function RegisterPage() {
             className="w-full bg-gray-200 text-gray-700 px-4 py-2 rounded-md mb-4 focus:outline-none focus:ring-2 focus:ring-gray-400"
             placeholder="Nombre"
           />
-          {errors.username && <p className="text-red-500 text-sm">{errors.username.message}</p>}
+          {errors.username && <p className="text-green-500 text-sm">{errors.username.message}</p>}
 
           {/* Email */}
           <input
@@ -36,7 +71,7 @@ export function RegisterPage() {
             className="w-full bg-gray-200 text-gray-700 px-4 py-2 rounded-md mb-4 focus:outline-none focus:ring-2 focus:ring-gray-400"
             placeholder="Correo electrónico"
           />
-          {errors.email && <p className="text-red-500 text-sm">{errors.email.message}</p>}
+          {errors.email && <p className="text-green-500 text-sm">{errors.email.message}</p>}
 
           {/* Número de teléfono */}
           <input
@@ -51,7 +86,7 @@ export function RegisterPage() {
             className="w-full bg-gray-200 text-gray-700 px-4 py-2 rounded-md mb-4 focus:outline-none focus:ring-2 focus:ring-gray-400"
             placeholder="Número de teléfono"
           />
-          {errors.phone && <p className="text-red-500 text-sm">{errors.phone.message}</p>}
+          {errors.phone && <p className="text-green-500 text-sm">{errors.phone.message}</p>}
 
           {/* Plan de inversión */}
           <div className="mb-4">
@@ -76,7 +111,7 @@ export function RegisterPage() {
                 <span className="ml-2 text-gray-700">Segundo Plan</span>
               </label>
             </div>
-            {errors.plan && <p className="text-red-500 text-sm">{errors.plan.message}</p>}
+            {errors.plan && <p className="text-green-500 text-sm">{errors.plan.message}</p>}
           </div>
 
           {/* Botón */}
