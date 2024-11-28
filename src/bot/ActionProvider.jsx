@@ -1,42 +1,30 @@
-import React from 'react';
+// ActionProvider.js
+class ActionProvider {
+  constructor(createChatBotMessage, setStateFunc) {
+      this.createChatBotMessage = createChatBotMessage;
+      this.setState = setStateFunc;
+  }
 
-const ActionProvider = ({ createChatBotMessage, setState, children }) => {
-  const handleHello = () => {
-    const botMessage = createChatBotMessage('Hello. Nice to meet you.');
-
-    setState((prev) => ({
-      ...prev,
-      messages: [...prev.messages, botMessage],
-    }));
-  };
-
-  const handleDog = () => {
-    const botMessage = createChatBotMessage(
-      "Here's a nice dog picture for you!",
-      {
-        widget: 'WidgetBot',
+  handleOption(id) {
+      if (id === "plans") {
+          const message = this.createChatBotMessage(
+              "Nuestros planes incluyen opciones flexibles y personalizables para todos. ¿Quieres más detalles?"
+          );
+          this.addMessageToState(message);
+      } else if (id === "contact") {
+          const message = this.createChatBotMessage(
+              "Puedes contactarnos a través del número +591-XXX-XXX o enviarnos un correo a contacto@empresa.com."
+          );
+          this.addMessageToState(message);
       }
-    );
+  }
 
-    setState((prev) => ({
-      ...prev,
-      messages: [...prev.messages, botMessage],
-    }));
-  };
-
-  // Put the handleHello and handleDog function in the actions object to pass to the MessageParser
-  return (
-    <div>
-      {React.Children.map(children, (child) => {
-        return React.cloneElement(child, {
-          actions: {
-            handleHello,
-            handleDog,
-          },
-        });
-      })}
-    </div>
-  );
-};
+  addMessageToState(message) {
+      this.setState((prevState) => ({
+          ...prevState,
+          messages: [...prevState.messages, message],
+      }));
+  }
+}
 
 export default ActionProvider;

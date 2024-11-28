@@ -83,7 +83,7 @@ model-viewer{
         height: 200px;
     }
     .intro h2{
-        top: 35px;
+        top: 55px;
         font-size: 60px;
     }
     .info-izq-areas p{
@@ -110,6 +110,10 @@ model-viewer{
     }
     .info-section-areas{
         width: 50%;
+    }
+    model-viewer{
+        width: 500px;
+        height: 500px;
     }
 }
 
