@@ -12,7 +12,7 @@ import { Header } from "./Components/Header.jsx";
 import { PlanesPage } from "./Pages/PlanesPage.jsx";
 import AdminPage from "./Pages/AdminPage.jsx";
 import ProtectedRoute from "./ProtectedRoute.jsx";
-import { ChatBot } from "./bot/Chatbot.jsx";
+import ChatBot from "./bot/Chatbot.jsx";
 // import config from "./bot/config.js";
 // import MessageParser from "./bot/MessageParser.jsx";
 // import ActionProvider from './bot/ActionProvider.jsx';
@@ -40,7 +40,6 @@ function App() {
           <Route path="/login" element={<LoginPage />} />
           <Route path="/notfound" element={<NotFound />} />
           <Route path="/planes" element={<PlanesPage />} />
-          {/* <Route path="/register" element={<RegisterPage />} /> */}
           <Route path="*" element={<Navigate to="notfound" replace />} />
           <Route element={<ProtectedRoute />}>
             <Route path="/admin" element={<AdminPage />} />

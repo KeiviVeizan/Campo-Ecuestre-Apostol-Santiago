@@ -30,6 +30,7 @@ export const PlanesPage = () => {
                   </div>
               ))}
       </section>
+      <h2 className='mb-7'>Formulario de Solicitud de admision</h2>
       <RegisterPage/>
     </main>
     </>

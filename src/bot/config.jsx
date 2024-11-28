@@ -1,5 +1,5 @@
 import { createChatBotMessage } from 'react-chatbot-kit';
-import WidgetBot from '../Components/WidgetBot';
+import WidgetBot from './WidgetBot';
 const config = {
   initialMessages: [createChatBotMessage(`Hi! I'm uwu`)],
   widgets: [

@@ -16,7 +16,7 @@ export function RegisterPage() {
   });
 
   return (
-    <div className="flex items-center justify-center min-h-screen bg-gray-100">
+    <div className="flex items-center justify-center m-5">
       <div className="max-w-md mx-auto p-6 bg-white rounded-md shadow-md">
         <h2 className="text-center text-xl font-bold mb-6 text-black">Interesados</h2>
         <form onSubmit={onSubmit}>
