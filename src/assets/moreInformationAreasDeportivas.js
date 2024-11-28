@@ -32,7 +32,7 @@ const moreInformationAreasDeportivas = [{
     title: "BASQUETBOL",
     image:"/public/images/areas/basquet.jpg",
     image1:"/images/areas/basquet1.webp",
-    modelo3d: "/Models/basketball.glb"
+    modelo3d: "/Models/Basketball_b.glb"
 },
 {
     id: 6 ,
@@ -53,7 +53,7 @@ const moreInformationAreasDeportivas = [{
     title: "FUTBOL",
     image:"/public/images/areas/futbol.avif",
     image1:"/images/areas/futbol2.avif",
-    modelo3d: "/Models/futbol_02.glb"
+    modelo3d: "/Models/futbol_01.glb"
 }
 
 ];
