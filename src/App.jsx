@@ -1,40 +1,26 @@
-import { useState } from 'react'
-import './App.css'
+import { useState } from "react";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
+import LoginPage from "./Pages/LoginPage.jsx";
+import { AuthProvider } from "./context/AuthContext.jsx";
+import HomePage from "./Pages/HomePage.jsx";
+import NotFound from "./Pages/NotFound.jsx";
+import RegisterPage from "./Pages/RegisterPage.jsx";
+import AdminPage from "./Pages/AdminPage.jsx";
+
 function App() {
-  const [Menu, setMenu] = useState(false)
-
-  const MenuNav = () =>{
-    setMenu(!Menu);
-  };
   return (
-    <>
-    <article className='inicio'>
-      <header>
-          <div className='header-top'>
-            <nav>
-              <button className='button-menu' onClick={MenuNav}>
-                  ☰
-              </button>
-              <ul className={`menu ${Menu ? 'menu-open' : ''}`}>
-                <li><a href="">Historia</a></li>
-                <li><a href="">Planes</a></li>
-                <li><a href="">Servicios</a></li>
-                <li><a href="">Ingresar</a></li>
-              </ul>
-            </nav>
-          </div>
-        </header>
-          <div className='header-bottom'>
-            <h1>
-              Centro Ecuestre Apóstol Santiago S.A.
-            </h1>
-            <p>
-              Entrena, diviértete y vive experiencias inolvidables en nuestro campo ecuestre.
-            </p>
-          </div>
-    </article>    
-    </>
-  )
+    <AuthProvider>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/login" element={<LoginPage />} />
+          <Route path="/notfound" element={<NotFound />} />
+          <Route path="/register" element={<RegisterPage />} />
+          <Route path="/admin" element={<AdminPage />}/>
+          <Route path="*" element={<Navigate to="notfound" replace />} />
+        </Routes>
+      </BrowserRouter>
+    </AuthProvider>
+  );
 }
-
-export default App
+export default App;
