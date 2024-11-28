@@ -99,6 +99,7 @@ model-viewer{
     }
 }
 @media(min-width:1440px){
+
     .info-section-especifict-a {
         flex-direction: row;
         justify-content: space-evenly;
