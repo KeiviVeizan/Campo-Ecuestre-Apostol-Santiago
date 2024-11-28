@@ -1,10 +1,10 @@
 import React from 'react'
 import areasDeportivas from '../assets/areasDeportivas'
-import '../component css/Areas-Comunes.css'
+import '../component css/Areas-Deportivas.css'
 import { NavLink } from 'react-router-dom'
 function Section2() {
   return (
-    <main className='section2-areas'>
+    <main id='section2' className='section2-areas'>
         <h2>
             Areas Deportivas
         </h2>

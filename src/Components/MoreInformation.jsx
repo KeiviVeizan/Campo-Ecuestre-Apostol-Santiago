@@ -13,14 +13,14 @@ export const MoreInformation = () => {
     useEffect (()=>{
         setMoreInformation (getInfomation(params.id))
     },[])
-    console.log (Header)
+    // console.log (Header)
 
   return (
     <>
     <main>
         <Header/>
         <div className='intro'>
-            <img src={moreInformation?.image1} alt="" />
+            <img src={moreInformation?.image1} alt="Imagen de las areas deportivas" />
             <h2>
                 AREA {moreInformation?.title}
             </h2>
@@ -36,7 +36,7 @@ export const MoreInformation = () => {
                         {moreInformation?.description}
                     </p>
                 </div>
-                <img src={moreInformation?.image} alt="" />
+                <img src={moreInformation?.image} alt="Imagen de las areas deportivas" />
             </div>
             <div>
                 <model-viewer
