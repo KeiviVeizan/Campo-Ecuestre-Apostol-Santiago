@@ -8,8 +8,8 @@ import {
   Tooltip,
   Legend,
 } from "chart.js";
+import {Header} from "../Components/Header"
 import { Bar } from "react-chartjs-2";
-
 // Registrar componentes necesarios
 ChartJS.register(
   BarElement,
@@ -26,7 +26,7 @@ const InterestedList = () => {
 
   useEffect(() => {
     // Obtener los datos desde el backend
-    fetch("http://localhost:4000/api/interested", {
+    fetch("http://192.168.0.201:4000/api/interested", {
       method: "GET",
       headers: {
         "Content-Type": "application/json",
@@ -62,12 +62,18 @@ const InterestedList = () => {
   };
 
   return (
+    <>
+    <Header/>
     <div className="flex flex-col items-center justify-center min-h-screen bg-gray-100 px-4 md:px-10">
-      <h1 className="text-2xl font-bold mb-6 text-black text-center">Administración</h1>
+      <h1 className="text-2xl font-bold mb-6 text-black text-center">
+        Administración
+      </h1>
 
       {/* Contenedor de la tabla */}
       <div className="bg-gray-100 p-6 rounded-lg shadow-md w-full max-w-6xl">
-        <h3 className="text-lg font-medium mb-4 text-black text-center">Los interesados son:</h3>
+        <h3 className="text-lg font-medium mb-4 text-black text-center">
+          Los interesados son:
+        </h3>
         <div className="space-y-4 overflow-x-auto">
           <div className="grid grid-cols-4 gap-6 bg-gray-200 p-4 rounded-t-md font-bold text-black text-center">
             <span>Nombre</span>
@@ -123,6 +129,7 @@ const InterestedList = () => {
         </div>
       </div>
     </div>
+    </>
   );
 };
 

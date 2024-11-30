@@ -60,7 +60,6 @@ export const AuthProvider = ({ children }) => {
         setLoading(false);
         return setUser(null);
       }
-
       try {
         const res = await verityTokenRequet(cookies.token);
         if (!res.data) {
@@ -68,7 +67,6 @@ export const AuthProvider = ({ children }) => {
           setLoading(false);
           return;
         }
-
         setIsAuthenticated(true);
         setUser(res.data);
         setLoading(false);

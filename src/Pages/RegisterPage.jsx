@@ -36,6 +36,8 @@ export function RegisterPage() {
   });
 
   return (
+    <>
+    <h2 className='mb-7 text-center text-4xl font-bold'>Formulario de Solicitud de admision</h2>
     <div className="flex items-center justify-center m-5">
       <div className="max-w-md mx-auto p-6 bg-white rounded-md shadow-md">
         <h2 className="text-center text-xl font-bold mb-6 text-black">Interesados</h2>
@@ -124,6 +126,7 @@ export function RegisterPage() {
         </form>
       </div>
     </div>
+    </>
   );
 }
 

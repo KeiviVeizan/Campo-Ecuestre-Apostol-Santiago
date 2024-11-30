@@ -1,5 +1,5 @@
-import { useState } from "react";
-import { Link } from "react-router-dom";
+import { useState,useEffect } from "react";
+import { Link,useLocation } from "react-router-dom";
 import { useAuth } from "../context/AuthContext";
 import '../component css/Header.css'
 export const Header = () => {
@@ -8,6 +8,15 @@ export const Header = () => {
   const MenuNav = () => {
     setMenu(!Menu);
   };
+  const location=useLocation()
+  useEffect(() => {
+    if (location.hash && location.state?.fromDifferentPage) {
+      const element = document.querySelector(location.hash);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+  }, [location]);
   return (
     <header>
     <div className="header-top">
@@ -27,20 +36,31 @@ export const Header = () => {
             </Link>
           </li>
           <li>
-            <a href="#section2">Servicios</a>
+            {location.pathname !== "/" ? (
+             <Link to="/#section2" state={{fromDifferentPage: true}}>Servicios</Link>
+            ):(
+              <a href="#section2">Servicios</a>
+            )}
           </li>
-          
+          <li>
+            <Link to="/contactanos">Contactanos</Link>
+          </li>
             {isAuthenticated ? (
               <>
                 <li>
-                  <Link
-                    to="/"
-                    onClick={() => {
-                      logout();
-                    }}
-                  >
-                    Salir
+                  {location.pathname!=="/admin" ? (  
+                    <Link
+                    to="/admin"
+                    // onClick={() => {
+                      //   logout();
+                      // }}
+                      >
+                    Administracion
                   </Link>
+                  ):(
+                    <li> Bienvenido {user.username}</li>
+                  )
+                  }
                 </li>
               </>
             ) : (
@@ -49,8 +69,7 @@ export const Header = () => {
                   <Link to="/login">Ingresar</Link>
                 </li>
               </>
-            )}
-          
+            )}          
         </ul>
       </nav>
     </div>
