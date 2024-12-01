@@ -13,6 +13,7 @@ import { PlanesPage } from "./Pages/PlanesPage.jsx";
 import AdminPage from "./Pages/AdminPage.jsx";
 import ProtectedRoute from "./ProtectedRoute.jsx";
 import ChatBot from "./bot/Chatbot.jsx";
+import RegisterFormPage from "./Pages/RegisterFormPage.jsx";
 // import config from "./bot/config.js";
 // import MessageParser from "./bot/MessageParser.jsx";
 // import ActionProvider from './bot/ActionProvider.jsx';
@@ -44,9 +45,10 @@ function App() {
           <Route path="*" element={<Navigate to="notfound" replace />} />
           <Route element={<ProtectedRoute />}>
             <Route path="/admin" element={<AdminPage />} />
+            <Route path="/add-user" element={<RegisterFormPage/>}/>
           </Route>
         </Routes>
-        <Footer />
+        {/* <Footer /> */}
         <ChatBot/>
       </BrowserRouter>
     </AuthProvider>

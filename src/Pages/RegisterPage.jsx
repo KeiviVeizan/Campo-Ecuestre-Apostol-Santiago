@@ -1,7 +1,7 @@
 import { useForm } from 'react-hook-form';
 import { registerRequest } from '../api/auth';
 import { useState } from 'react'; // Para manejar el estado del mensaje
-
+import { Header } from '../Components/Header'
 export function RegisterPage() {
   const {
     register,
@@ -37,6 +37,7 @@ export function RegisterPage() {
 
   return (
     <>
+    <Header/>
     <h2 className='mb-7 text-center text-4xl font-bold'>Formulario de Solicitud de admision</h2>
     <div className="flex items-center justify-center m-5">
       <div className="max-w-md mx-auto p-6 bg-white rounded-md shadow-md">
@@ -51,7 +52,7 @@ export function RegisterPage() {
 
         {/* Mostrar mensaje de error */}
         {errorMessage && (
-          <div className="mb-4 p-4 text-white bg-green-500 rounded-md text-center">
+          <div className="mb-4 p-4 text-white bg-red-500 rounded-md text-center">
             {errorMessage}
           </div>
         )}

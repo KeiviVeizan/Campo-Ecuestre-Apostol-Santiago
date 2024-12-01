@@ -6,12 +6,11 @@ import cors from "cors";
 
 const app = express();
 
-// Configuración de CORS para permitir solicitudes desde http://localhost:5173
 app.use(
   cors({
-    // origin: "http://localhost:5173", // El origen de tu frontend
+    // origin: "http://localhost:5173",
     origin:"http://192.168.0.207:5173",
-    credentials: true, // Esto es necesario si usas cookies o autenticación basada en sesión
+    credentials: true,
   })
 );
 
@@ -19,7 +18,6 @@ app.use(morgan("dev"));
 app.use(express.json());
 app.use(cookieParser());
 
-// Ruta para tus interesados
 app.use("/api", authRoutes);
 
 export default app;

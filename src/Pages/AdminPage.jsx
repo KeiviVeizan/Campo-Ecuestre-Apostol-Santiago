@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { useAuth } from "../context/AuthContext";
 import {
   Chart as ChartJS,
   BarElement,
@@ -10,6 +11,7 @@ import {
 } from "chart.js";
 import {Header} from "../Components/Header"
 import { Bar } from "react-chartjs-2";
+import { Link } from "react-router-dom";
 // Registrar componentes necesarios
 ChartJS.register(
   BarElement,
@@ -26,7 +28,7 @@ const InterestedList = () => {
 
   useEffect(() => {
     // Obtener los datos desde el backend
-    fetch("http://192.168.0.201:4000/api/interested", {
+    fetch("http://192.168.0.207:4000/api/interested", {
       method: "GET",
       headers: {
         "Content-Type": "application/json",
@@ -60,7 +62,7 @@ const InterestedList = () => {
       ],
     });
   };
-
+  const {  logout, user } = useAuth();
   return (
     <>
     <Header/>
@@ -128,6 +130,8 @@ const InterestedList = () => {
           )}
         </div>
       </div>
+      <Link className="text-black" to="/add-user">Agregar usuario</Link>
+      <Link onClick={()=>{logout()}}>Salir</Link>
     </div>
     </>
   );

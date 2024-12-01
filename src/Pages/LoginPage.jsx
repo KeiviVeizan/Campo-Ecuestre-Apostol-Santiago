@@ -55,6 +55,7 @@ function LoginPage() {
               {...register("password", { required: true })}
               className="w-full border rounded px-4 py-2 text-gray-700 focus:outline-none focus:ring-2 focus:ring-indigo-500"
               placeholder="Password"
+              autoComplete="off"
             />
             {errors.password && (
               <p className="text-red-500">password is required</p>
