@@ -1,0 +1,28 @@
+.video-campo{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 50px 0px;
+}
+video {
+    width: 300px;
+    border-radius: 20px;
+    box-shadow: 0px 0px 20px 2px rgb(93, 113, 103);
+}
+
+@media(min-width:600px){
+    video{
+        width: 600px;
+    }
+}
+@media(min-width:1024px){
+    video{
+        width: 800px;
+    }
+}
+@media(min-width:1440px){
+    video{
+        width: 1000px;
+    }
+}
