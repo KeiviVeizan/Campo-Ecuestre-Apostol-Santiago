@@ -28,7 +28,7 @@ const InterestedList = () => {
 
   useEffect(() => {
     // Obtener los datos desde el backend
-    fetch("http://192.168.0.207:4000/api/interested", {
+    fetch("http://172.174.2.219:4000/api/interested", {
       method: "GET",
       headers: {
         "Content-Type": "application/json",

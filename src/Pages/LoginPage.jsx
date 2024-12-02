@@ -8,14 +8,15 @@ function LoginPage() {
     handleSubmit,
     formState: { errors },
   } = useForm();
-  const { signin, errors: signinErrors, isAuthenticated } = useAuth();
+  const { signin, errors: signinErrors, isAuthenticated,user } = useAuth();
   const navigate = useNavigate();
   const onSubmit = handleSubmit((data) => {
     signin(data);
   });
 
   useEffect(() => {
-    if (isAuthenticated) navigate("/admin");
+    if (isAuthenticated &&user.role=="Administrador") navigate("/admin")
+    else if(isAuthenticated && user.role=="Vendedor") navigate("/vendedor")
   }, [isAuthenticated]);
   return (
     <div className="flex h-screen">

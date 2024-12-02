@@ -35,13 +35,15 @@ export const Header = () => {
               Planes
             </Link>
           </li>
+          <>
           <li>
             {location.pathname !== "/" ? (
-             <Link to="/#section2" state={{fromDifferentPage: true}}>Servicios</Link>
+              <Link to="/#section2" state={{fromDifferentPage: true}}>Servicios</Link>
             ):(
               <a href="#section2">Servicios</a>
             )}
           </li>
+          </>
           <li>
             <Link to="/contactanos">Contactanos</Link>
           </li>

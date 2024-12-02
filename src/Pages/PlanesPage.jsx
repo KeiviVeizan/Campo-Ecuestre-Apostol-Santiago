@@ -31,7 +31,7 @@ export const PlanesPage = () => {
                   </div>
               ))}
       </section>
-      <Link to="/contactanos" class='mb-4 bg-green-800 px-4 rounded-lg text-white hover:scale-125 hover:bg-zinc-600 hover:text-green-400 transition ease-out duration-500'>Contactanos</Link>
+      <Link to="/contactanos" className='mb-4 bg-green-800 px-4 rounded-lg text-white hover:scale-125 hover:bg-zinc-600 hover:text-green-400 transition ease-out duration-500'>Contactanos</Link>
     </main>
     </>
   )

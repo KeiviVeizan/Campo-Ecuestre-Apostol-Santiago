@@ -27,7 +27,7 @@ function RegisterFormPage() {
   const onSubmit = handleSubmit(async (values) => {
     try {
       if(signup(values)){
-        setSuccessMessage('¡Registro exitoso! Te has registrado correctamente.');
+        setSuccessMessage('¡Registro exitoso! Se registro al usuario correctamente.');
         setErrorMessage(''); 
         reset();
         setTimeout(()=>{setSuccessMessage("")},3000)
