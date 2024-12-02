@@ -9,6 +9,7 @@ import {
   Legend,
 } from "chart.js";
 import { Bar } from "react-chartjs-2";
+import { Link } from "react-router-dom";
 
 // Registrar componentes necesarios
 ChartJS.register(
@@ -64,7 +65,7 @@ const InterestedList = () => {
   return (
     <div className="flex flex-col items-center justify-center min-h-screen bg-gray-100 px-4 md:px-10">
       <h1 className="text-2xl font-bold mb-6 text-black text-center">Administración</h1>
-
+      <Link to="/">Home</Link>
       {/* Contenedor de la tabla */}
       <div className="bg-gray-100 p-6 rounded-lg shadow-md w-full max-w-6xl">
         <h3 className="text-lg font-medium mb-4 text-black text-center">Los interesados son:</h3>
