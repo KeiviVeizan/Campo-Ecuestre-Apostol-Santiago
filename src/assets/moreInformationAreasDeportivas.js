@@ -4,7 +4,7 @@ const moreInformationAreasDeportivas = [{
     description: "La equitación es la práctica de montar y dirigir caballos, una disciplina que combina destreza física, conexión con el animal y técnicas de control y equilibrio. Incluye diversas modalidades, como el salto, la doma clásica y el cross-country. Es considerada tanto un deporte como un arte, pues requiere entrenamiento continuo, empatía con el caballo y conocimiento de su manejo y cuidados.",
     image:"/images/areas/equitacion1.svg",
     image1:"/images/areas/equitacion2.jpg",
-    modelo3d: "/Models/establo_f.glb"
+    modelo3d: "/Models/establo_b.glb"
 },
 {
     id: 2 ,
