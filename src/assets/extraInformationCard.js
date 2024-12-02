@@ -6,13 +6,13 @@ const extraInformationCard = [{
 {
     id:2,
     title: "El Campo Ecuestre Apostol Santiago es un proyecto a futuro",
-    description:"El Centro Ecuestre Apóstol Santiago S.A., previsto para 2025, ofrecerá una experiencia única y moderna para toda la familia, combinando instalaciones de excelencia con un enfoque innovador. Más allá de la equitación, contará con áreas deportivas, un spa de relajación, espacios sociales y eventos de primer nivel. Diseñado para fomentar la convivencia y el bienestar, será un club exclusivo que garantiza una experiencia integral para socios e inversionistas, redefiniendo los estándares de los clubes tradicionales en la ciudad.",
+    lista:["Apertura 2025: Una experiencia moderna y única para toda la familia.","Más que equitación: Áreas deportivas, spa, y espacios sociales.","Eventos de excelencia: Instalaciones diseñadas para actividades de primer nivel.", "Enfoque innovador: Convivencia, bienestar y exclusividad.","Redefinición de estándares: Un club integral y único en la ciudad."],
     images:"/public/images/img2-page1.webp"
 },
 {
     id:3, 
     title:"¿Porque invertir en el campo ecuestre Apostol santiago?",
-    description:"Invertir en nuestro campo ecuestre es una oportunidad excepcional para ser parte de un proyecto que fusiona deporte, naturaleza y recreación en un entorno exclusivo. Más allá de la equitación, ofrece actividades deportivas y recreativas para todas las edades, atrayendo a familias y amantes del aire libre. Con áreas de entrenamiento, comedor y espacios integrales, asegura un flujo constante de visitantes, convirtiéndose en una inversión rentable y sostenible.",
+    lista:["Una experiencia que combina deporte, naturaleza y recreación en un entorno exclusivo.", "Actividades deportivas y recreativas para todas las edades, además de la equitación.","Áreas de entrenamiento, comedor y espacios integrales que atraen a visitantes frecuentes.", "Una inversión rentable y sostenible con alto potencial de crecimiento." ],
     images:"/public/images/img3-page1.jpg"
 }
 ];

@@ -59,6 +59,12 @@
     font-size: 15px;
     top: 20px;
     padding: 10px 5px;
+    transition: background-color, .5s;
+}
+.info-areas-comunes a:hover{
+    background-color: white;
+    color: #011222;
+    border-radius: 5px;
 }
 @media(min-width:375px){
     .info-areas-comunes{
@@ -99,10 +105,15 @@
 }
 @media(min-width:1440px){
     .section5-areas h2{
-        font-size: 80px;
+        font-size: 60px;
+        margin: 50px 0px;
+    }
+    .info-areas-comunes:hover {
+        transform: scale(1.1);
     }
     .info-areas-comunes{
         width: 700px;
+        transition: background-color, transform 1s;
     }
     .info-areas-comunes h3{
         font-size: 40px;
