@@ -1,0 +1,65 @@
+.section3-info{
+    background-image:url('/public/images/img1-page1-section3.avif') ;
+    background-position:center;
+    backdrop-filter: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 12px;
+    margin: 20px;
+    border-radius: 30px;
+    height: 200px;
+    width: 90%;
+}
+.section3-info h3{
+    max-width: 90%;
+    color: white;
+}
+.section3-info a{
+    text-decoration: none;
+    margin-top: 30px;
+    color: #131D14;
+    background-color: white;
+    border-radius: 10px;
+    padding: 10px 20px;
+}
+.section3-info a:hover{
+    background-color: #131D14;
+    color: white;
+    
+}
+
+@media(min-width:600px ){
+    .section3-info{
+        justify-content: center;
+        width: 100;
+        background-size: 1000px;
+        height: 300px;
+        margin: 35px;
+    }
+    .section3-info h3{
+        font-size: 30px;
+    }
+    .section3-info a{
+        font-size: 25px;
+    }
+}
+@media(min-width:1440px){
+    .section3-info {
+        width: 200;
+        background-size: 1500px;
+        height: 400px;
+        margin: 70px;
+    }
+    .section3-info h3{
+        font-size: 50px;
+    }
+    .section3-info a{
+        font-size: 35px;
+        padding: 25px;
+        border-radius: 40px;
+    }
+}

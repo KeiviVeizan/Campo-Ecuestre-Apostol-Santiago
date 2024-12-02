@@ -1,0 +1,113 @@
+.section5-info {
+    display: grid;
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+    place-items: center;
+}
+.section5-areas h2{
+    margin-top:20px ;
+    font-size: 30px;
+    text-align: center;
+}
+.info-areas-comunes{
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    width: 300px;
+    margin-top: 40px;
+}
+.info-areas-comunes1{
+    display: flex;
+    flex-direction: row;
+    text-align: left;
+}
+.info-areas-comunes2{
+    flex-direction: row-reverse;
+    justify-content: space-evenly;
+    text-align: right;
+}
+.Card-Info-Areas-Comunes{
+    width: 50%;
+    height: 100%;
+}
+.info-areas-comunes h3{
+    line-height: 80px;
+    font-size: 20px;
+}
+.info-areas-comunes p{
+    max-width: 90%;
+    font-size: 12px;
+    color: black;
+}
+.info-areas-comunes1 p{
+    text-align: left;
+}
+.info-areas-comunes2 p{
+    max-width: 100%;
+    text-align: right;
+}
+.info-areas-comunes img{
+    width: 120px; 
+    height: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+    object-position: -20px;
+    box-shadow: 0px 0px 20px 10px gray ;
+}
+.info-areas-comunes a{
+    color: white;
+    background-color: #011222;
+    font-size: 15px;
+    top: 20px;
+    padding: 10px 5px;
+}
+@media(min-width:375px){
+    .info-areas-comunes{
+        width: 370px;
+    }
+    .info-areas-comunes img{
+        width: 150px;
+        height: 350px;
+    }
+    .info-areas-comunes h3{
+        font-size: 25px;
+    }
+    .info-areas-comunes p{
+        font-size: 15px;
+    }
+}
+@media(min-width: 600px){
+    .info-areas-comunes{
+        width: 600px;
+    }
+    .info-areas-comunes img{
+        width: 280px;
+    }
+}
+@media(min-width:1024px){
+    .section5-areas h2{
+        font-size: 50px;
+    }
+    .info-areas-comunes{
+        width: 400px;
+    }
+    .section5-info{
+        grid-template-columns: repeat(2, minmax(0, 1fr));;
+    }
+    .info-areas-comunes img{
+        width: 200px;
+    }
+}
+@media(min-width:1440px){
+    .section5-areas h2{
+        font-size: 80px;
+    }
+    .info-areas-comunes{
+        width: 700px;
+    }
+    .info-areas-comunes h3{
+        font-size: 40px;
+    }
+    .info-areas-comunes p{
+        font-size: 20px;
+    }
+}
