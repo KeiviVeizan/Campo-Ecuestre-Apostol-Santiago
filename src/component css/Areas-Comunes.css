@@ -121,4 +121,7 @@
     .info-areas-comunes p{
         font-size: 20px;
     }
+    .info-areas-comunes a{
+        padding: 10px;
+    }
 }

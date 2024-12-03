@@ -1,0 +1,29 @@
+.fade-in-section{
+    margin: 20px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+@media(min-width:375px){
+    .fade-in-section {
+        margin: 20px 40px 40px;
+        border: solid rgb(16, 47, 40) 2px;
+    }
+}
+@media(min-width:600px){
+    .fade-in-section {
+        margin: 20px 80px 60px;
+        border: solid rgb(16, 47, 40) 2px;
+    }
+}
+@media(min-width:1024px){
+    .fade-in-section{
+        margin: 20px 100px 60px;
+    }
+}
+@media(min-width:1440px){
+    .fade-in-section{
+        margin: 20px 300px 60px;
+    }
+}
