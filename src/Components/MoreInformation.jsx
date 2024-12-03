@@ -13,7 +13,7 @@ export const MoreInformation = () => {
     useEffect (()=>{
         setMoreInformation (getInfomation(params.id))
     },[])
-    console.log (Header)
+    // console.log (Header)
 
   return (
     <>

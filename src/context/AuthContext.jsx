@@ -1,5 +1,5 @@
 import { createContext, useContext, useEffect, useState } from "react";
-import { loginRequest, verityTokenRequet } from "../api/auth";
+import { loginRequest, verityTokenRequet,registerUserRequest } from "../api/auth";
 import Cookies from "js-cookie";
 
 export const AuthContext = createContext();
@@ -17,9 +17,9 @@ export const AuthProvider = ({ children }) => {
   const [loading, setLoading] = useState(true);
   const signup = async (user) => {
     try {
+      const res = await registerUserRequest(user);
       console.log(res.data);
-      setUser(res.data);
-      setIsAuthenticated(true);
+      // setIsAuthenticated(true);
     } catch (error) {
       setErrors(error.response.data);
     }
@@ -27,9 +27,9 @@ export const AuthProvider = ({ children }) => {
   const signin = async (user) => {
     try {
       const res = await loginRequest(user);
-      console.log(res);
-      setIsAuthenticated(true);
+      // console.log(res.data)
       setUser(res.data);
+      setIsAuthenticated(true);
     } catch (error) {
       if (Array.isArray(error.response.data)) {
         return setErrors(error.response.data);
@@ -60,7 +60,6 @@ export const AuthProvider = ({ children }) => {
         setLoading(false);
         return setUser(null);
       }
-
       try {
         const res = await verityTokenRequet(cookies.token);
         if (!res.data) {
@@ -68,7 +67,6 @@ export const AuthProvider = ({ children }) => {
           setLoading(false);
           return;
         }
-
         setIsAuthenticated(true);
         setUser(res.data);
         setLoading(false);

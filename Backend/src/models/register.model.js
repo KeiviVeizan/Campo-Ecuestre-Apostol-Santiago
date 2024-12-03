@@ -11,10 +11,11 @@ const registerSchema = new mongoose.Schema({
         type: String, required: true, trim: true
     },
     plan: {
-        type: String, required: true, trim: true,default:"uwu"
+        type: String, required: true, enum: ['Primer Plan', 'Segundo Plan'],
+        trim: true
     }
 }, {
     timestamps: true
 })
 
-export default mongoose.model('Register', registerSchema)
+export default mongoose.model('Interested', registerSchema)

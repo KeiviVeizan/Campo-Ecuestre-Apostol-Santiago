@@ -1,5 +1,5 @@
-import { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { useState,useEffect } from "react";
+import { Link,useLocation } from "react-router-dom";
 import { useAuth } from "../context/AuthContext";
 import "../component css/Header.css";
 
@@ -12,6 +12,15 @@ export const Header = () => {
   const MenuNav = () => {
     setMenu(!Menu);
   };
+  const location=useLocation()
+  useEffect(() => {
+    if (location.hash && location.state?.fromDifferentPage) {
+      const element = document.querySelector(location.hash);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+  }, [location]);
 
   const handleScroll = () => {
     if (window.scrollY < lastScrollY) {
@@ -32,33 +41,50 @@ export const Header = () => {
 
   return (
     <header>
-      <div className={`header-top ${showNavbar ? "show" : "hide"}`}>
-        <nav>
-          <button className="button-menu" onClick={MenuNav}>
-            ☰
-          </button>
-          <ul className={`menu ${Menu ? "menu-open" : ""}`}>
-            <li>
-              <Link to="/">Inicio</Link>
-            </li>
-            <li>
-              <Link to="/planes">Planes</Link>
-            </li>
-            <li>
+    <div className="header-top">
+      <nav>
+        <button className="button-menu" onClick={MenuNav}>
+          ☰
+        </button>
+        <div className={`header-top ${showNavbar ? "show" : "hide"}`}>
+        <ul className={`menu ${Menu ? "menu-open" : ""}`}>
+          <li>
+            <Link to="/"> 
+              Inicio
+             </Link>
+          </li>
+          <li>
+            <Link to="/planes">
+              Planes
+            </Link>
+          </li>
+          <li>
+            {location.pathname !== "/" ? (
+             <Link to="/#section2" state={{fromDifferentPage: true}}>Servicios</Link>
+            ):(
               <a href="#section2">Servicios</a>
-            </li>
+            )}
+          </li>
+          <li>
+            <Link to="/contactanos">Contactanos</Link>
+          </li>
 
             {isAuthenticated ? (
               <>
                 <li>
-                  <Link
-                    to="/"
-                    onClick={() => {
-                      logout();
-                    }}
-                  >
-                    Salir
+                  {location.pathname!=="/admin" ? (  
+                    <Link
+                    to="/admin"
+                    // onClick={() => {
+                      //   logout();
+                      // }}
+                      >
+                    Administracion
                   </Link>
+                  ):(
+                    <li> Bienvenido {user.username}</li>
+                  )
+                  }
                 </li>
               </>
             ) : (
@@ -67,10 +93,12 @@ export const Header = () => {
                   <Link to="/login">Ingresar</Link>
                 </li>
               </>
-            )}
-          </ul>
-        </nav>
-      </div>
-    </header>
+            )}          
+        </ul>
+        </div>
+      </nav>
+    </div>
+  </header>
+
   );
 };

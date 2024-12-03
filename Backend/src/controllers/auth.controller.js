@@ -3,7 +3,39 @@ import bcrypt from "bcryptjs";
 import { createAccessToken } from "../libs/jwt.js";
 import jwt from "jsonwebtoken";
 import { TOKEN_SECRET } from "../config.js";
+export const registerUser = async (req, res) => {
+  const { email, password, username, role} = req.body;
+  try {
+    const userFound = await User.findOne({ email });
+    if (userFound) return res.status(400).json(["The email is already in use"]);
+    const passwordHash = await bcrypt.hash(password, 10);
+    const newUser = new User({
+      username,
+      email,
+      password: passwordHash,
+      role,
+    });
+    console.log(newUser);
+    const userSaved = await newUser.save();
+    const token = await createAccessToken({ id: userSaved._id });
+    // res.cookie("token", token);
+    // res.json({
+    //      message:"User created successfully"
+    //      })
+    res.json({
+      id: userSaved._id,
+      username: userSaved.username,
+      email: userSaved.email,
+      createdAt: userSaved.createdAt,
+      updatedAt: userSaved.updatedAt,
+      role: userSaved.role,
+    });
+  } catch (error) {
+    res.status(500).json({ message: error.message });
+  }
 
+  // res.send('Registrando')
+};
 export const login = async (req, res) => {
   const { email, password } = req.body;
   try {
@@ -21,6 +53,7 @@ export const login = async (req, res) => {
       email: userFound.email,
       createdAt: userFound.createdAt,
       updatedAt: userFound.updatedAt,
+      role: userFound.role,
     });
   } catch (error) {
     res.status(500).json({ message: error.message });
