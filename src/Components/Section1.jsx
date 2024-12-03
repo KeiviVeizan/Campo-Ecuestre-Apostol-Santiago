@@ -13,6 +13,13 @@ function Section1() {
                       <div className='Card-Info'>
                       <h3>{info.title}</h3>
                       <p>{info.description}</p>
+                      <ul>
+                          {
+                            info.lista?.map((lista)=>(
+                              <li>{lista}</li>
+                            ))
+                          }
+                        </ul>
                       </div>
                       {info.images && <img src={info.images} alt="Imagen de la empresa" />}
                   </div>

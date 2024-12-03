@@ -10,8 +10,9 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@google/generative-ai": "^0.21.0",
     "axios": "^1.7.7",
-    "chart.js": "^4.4.6",
+    "chart.js": "^4.4.7",
     "cors": "^2.8.5",
     "dayjs": "^1.11.13",
     "js-cookie": "^3.0.5",

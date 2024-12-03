@@ -1,10 +1,14 @@
 import { useState,useEffect } from "react";
 import { Link,useLocation } from "react-router-dom";
 import { useAuth } from "../context/AuthContext";
-import '../component css/Header.css'
+import "../component css/Header.css";
+
 export const Header = () => {
   const [Menu, setMenu] = useState(false);
+  const [showNavbar, setShowNavbar] = useState(true);
+  const [lastScrollY, setLastScrollY] = useState(0);
   const { isAuthenticated, logout, user } = useAuth();
+
   const MenuNav = () => {
     setMenu(!Menu);
   };
@@ -17,6 +21,24 @@ export const Header = () => {
       }
     }
   }, [location]);
+
+  const handleScroll = () => {
+    if (window.scrollY < lastScrollY) {
+      setShowNavbar(true);
+    } else {
+      setShowNavbar(false);
+    }
+    setLastScrollY(window.scrollY); 
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, [lastScrollY]);
+
   return (
     <header>
     <div className="header-top">
@@ -24,6 +46,7 @@ export const Header = () => {
         <button className="button-menu" onClick={MenuNav}>
           ☰
         </button>
+        <div className={`header-top ${showNavbar ? "show" : "hide"}`}>
         <ul className={`menu ${Menu ? "menu-open" : ""}`}>
           <li>
             <Link to="/"> 
@@ -47,6 +70,7 @@ export const Header = () => {
           <li>
             <Link to="/contactanos">Contactanos</Link>
           </li>
+
             {isAuthenticated ? (
               <>
                 <li>
@@ -84,8 +108,10 @@ export const Header = () => {
               </>
             )}          
         </ul>
+        </div>
       </nav>
     </div>
   </header>
-  )
-}
+
+  );
+};

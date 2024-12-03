@@ -6,13 +6,10 @@ import HomePage from "./Pages/HomePage.jsx";
 import NotFound from "./Pages/NotFound.jsx";
 import RegisterPage from "./Pages/RegisterPage.jsx";
 import { MoreInformation } from "./Components/MoreInformation.jsx";
-import { Footer } from "./Components/Footer.jsx";
 import { MoreInformationAreas } from "./Components/MoreInformationAreas.jsx";
-import { Header } from "./Components/Header.jsx";
 import { PlanesPage } from "./Pages/PlanesPage.jsx";
 import AdminPage from "./Pages/AdminPage.jsx";
 import ProtectedRoute from "./ProtectedRoute.jsx";
-import ChatBot from "./bot/Chatbot.jsx";
 import RegisterFormPage from "./Pages/RegisterFormPage.jsx";
 import VendedorPage from "./Pages/VendedorPage.jsx";
 // import config from "./bot/config.js";
@@ -53,8 +50,9 @@ function App() {
           </Route>
         </Routes>
         {/* <Footer /> */}
-        <ChatBot/>
+        {/* <ChatBot/> */}
       </BrowserRouter>
+      
     </AuthProvider>
   );
 }

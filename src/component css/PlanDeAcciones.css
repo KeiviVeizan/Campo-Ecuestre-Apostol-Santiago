@@ -25,6 +25,7 @@
     background-color: white;
     border-radius: 10px;
     padding: 10px 20px;
+    transition: background-color 1s;
 }
 .section3-info a:hover{
     background-color: #131D14;
@@ -35,10 +36,11 @@
 @media(min-width:600px ){
     .section3-info{
         justify-content: center;
-        width: 100;
+        width: 100%;
         background-size: 1000px;
         height: 300px;
         margin: 35px;
+        max-width: 90%;
     }
     .section3-info h3{
         font-size: 30px;
@@ -47,15 +49,23 @@
         font-size: 25px;
     }
 }
+@media(min-width:1024px){
+    .section3-info{
+        max-width: 93%;
+    }
+}
 @media(min-width:1440px){
     .section3-info {
-        width: 200;
-        background-size: 1500px;
+        width: 100%;
+        background-size: 950px;
         height: 400px;
-        margin: 70px;
+        margin: 70px 0px;
+        max-width: 100%;
+        border-radius: 60%;
     }
     .section3-info h3{
         font-size: 50px;
+        max-width: 50%;
     }
     .section3-info a{
         font-size: 35px;
