@@ -22,7 +22,7 @@ export function RegisterPage() {
     <div className="flex flex-col items-center space-y-10 p-6">
       <div className="flex flex-col md:flex-row space-y-8 md:space-y-0 md:space-x-8 p-8 w-full">
         {/* Formulario */}
-        <div className="flex-1 bg-white p-6 rounded-md shadow-md">
+        <div className="bg-green-100 flex-1 p-6 rounded-md shadow-md">
           <h1 className="text-2xl font-bold text-center mb-6">Hable Con Nosotros</h1>
 
           <form onSubmit={onSubmit} className="space-y-4">
@@ -30,7 +30,7 @@ export function RegisterPage() {
             <input
               type="text"
               {...register("username", { required: "Por favor, ingrese su nombre" })}
-              className="w-full bg-gray-100 px-4 py-2 rounded focus:outline-none focus:ring-2 focus:ring-gray-400"
+              className="w-full bg-green-50 px-4 py-2 rounded focus:outline-none focus:ring-2 focus:ring-gray-400"
               placeholder="Nombre"
             />
             {errors.username && <p className="text-red-500 text-sm">{errors.username.message}</p>}
@@ -39,7 +39,7 @@ export function RegisterPage() {
             <input
               type="email"
               {...register("email", { required: "Por favor, ingrese su correo electrónico" })}
-              className="w-full bg-gray-100 px-4 py-2 rounded focus:outline-none focus:ring-2 focus:ring-gray-400"
+              className="w-full bg-green-50 px-4 py-2 rounded focus:outline-none focus:ring-2 focus:ring-gray-400"
               placeholder="Correo electrónico"
             />
             {errors.email && <p className="text-red-500 text-sm">{errors.email.message}</p>}
@@ -54,7 +54,7 @@ export function RegisterPage() {
                   message: "Solo se permiten números",
                 },
               })}
-              className="w-full bg-gray-100 px-4 py-2 rounded focus:outline-none focus:ring-2 focus:ring-gray-400"
+              className="w-full bg-green-50 px-4 py-2 rounded focus:outline-none focus:ring-2 focus:ring-gray-400"
               placeholder="Número de teléfono"
             />
             {errors.phone && <p className="text-red-500 text-sm">{errors.phone.message}</p>}
@@ -113,7 +113,7 @@ export function RegisterPage() {
       {/* Sección de contacto */}
       <div className="bg-green-100 p-8 rounded-md shadow-md">
         <div className="text-center space-y-4 text-black">
-          <p className="text-lg text-black hover:text-gray-700 hover:font-bold transition duration-300">
+          <p className="text-lg text-black">
             ¿Necesita ayuda? Por favor, póngase en contacto con nuestro centro de llamadas.
           </p>
           <div>
