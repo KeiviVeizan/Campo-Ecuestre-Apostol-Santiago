@@ -43,7 +43,7 @@ function App() {
           <Route path="/notfound" element={<NotFound />} />
           <Route path="/planes" element={<PlanesPage />} />
           <Route path="/contactanos" element={<RegisterPage/>}/>
-          <Route path="*" element={<Navigate to="notfound" replace />} />
+          <Route path="*" element={<Navigate to="/notfound" replace />} />
           <Route element={<ProtectedRoute allowedRole={["Administrador"]} />}>
             <Route path="/admin" element={<AdminPage />} />
             <Route path="/add-user" element={<RegisterFormPage/>}/>

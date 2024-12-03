@@ -51,14 +51,25 @@ export const Header = () => {
               <>
                 <li>
                   {location.pathname!=="/admin" ? (  
-                    <Link
-                    to="/admin"
-                    // onClick={() => {
-                      //   logout();
-                      // }}
-                      >
-                    Administracion
-                  </Link>
+                    user.role!=="Administrador" ? (
+                      <Link
+                      to="/vendedor"
+                      // onClick={() => {
+                        //   logout();
+                        // }}
+                        >
+                      Ventas
+                    </Link>
+                    ):(
+                      <Link
+                      to="/admin"
+                      // onClick={() => {
+                        //   logout();
+                        // }}
+                        >
+                      Administracion
+                    </Link>
+                    )
                   ):(
                     <li> Bienvenido {user.username}</li>
                   )

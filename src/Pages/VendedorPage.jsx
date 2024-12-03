@@ -1,6 +1,10 @@
+import { Header } from "../Components/Header"
+
 function VendedorPage() {
   return (
-    <div>VendedorPage</div>
+    <div>
+      <Header/>
+    </div>
   )
 }
 
