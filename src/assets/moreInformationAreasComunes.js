@@ -11,7 +11,7 @@ const moreInformationAreasComunes = [{
     title:"Bar del Campo Ecuestre",
     description: "En el Bar del campo ecuestre podrás contar con diversidad de tragos y tambien con 2 mesas de billar para jugar entre amigos. Y si quieres mirar algo no te preocupes... El bar estará equipado don 10 televisores para que no te pierdas nada",
     image:"/public/images/areas-comunes/bar.jpg",
-    image1: "/images/areas-comunes/bar.jpg ",
+    image1: "/images/areas-comunes/bar2.avif ",
     modelo3d: "/Models/bar_m.glb",
 
 }

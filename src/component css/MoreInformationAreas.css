@@ -83,11 +83,11 @@ model-viewer{
 }
 @media(min-width: 1024px){
     .intro-a img{
-        margin-top: 0px;
+        margin-top: 80px;
         height: 200px;
     }
     .intro-a h2{
-        top: 35px;
+        top: 130px;
         font-size: 60px;
     }
     .info-izq-areas-a p{
