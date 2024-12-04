@@ -3,6 +3,7 @@ import { useParams } from 'react-router-dom'
 import moreInformationAreasComunes from '../assets/moreInformationAreasComunes'
 import '../component css/MoreInformationAreas.css'
 import { Header } from './Header'
+import { Footer } from './Footer'
 
 const getInfomation = (id)=>{
     const info = moreInformationAreasComunes.find((index)=>index.id === Number(id) )
@@ -49,6 +50,7 @@ export const MoreInformationAreas = () => {
                 ></model-viewer>
             </div>
         </main>
+        <Footer/>
     </main>
         </>
   )

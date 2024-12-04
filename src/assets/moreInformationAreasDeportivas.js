@@ -4,7 +4,7 @@ const moreInformationAreasDeportivas = [{
     description: "La equitación es la práctica de montar y dirigir caballos, una disciplina que combina destreza física, conexión con el animal y técnicas de control y equilibrio. Incluye diversas modalidades, como el salto, la doma clásica y el cross-country. Es considerada tanto un deporte como un arte, pues requiere entrenamiento continuo, empatía con el caballo y conocimiento de su manejo y cuidados.",
     image:"/images/areas/equitacion1.svg",
     image1:"/images/areas/equitacion2.jpg",
-    modelo3d: "/Models/establo_f.glb"
+    modelo3d: "/Models/establo_b.glb"
 },
 {
     id: 2 ,
@@ -36,7 +36,7 @@ const moreInformationAreasDeportivas = [{
     description: "En nuestro club, ofrecemos un espacio ideal para disfrutar y mejorar en el deporte del básquetbol, un deporte que promueve el trabajo en equipo, la velocidad y la precisión. Contamos con canchas de primer nivel y un equipo de entrenadores profesionales listos para ayudarte a desarrollar tus habilidades, sin importar si eres principiante o jugador experimentado. También organizamos ligas, torneos y entrenamientos personalizados para que puedas competir, aprender y divertirte.  ¡Ven y únete al Campo Ecuestre Apostol Santiago!",
     image:"/public/images/areas/basquet.jpg",
     image1:"/images/areas/basquet1.webp",
-    modelo3d: "/Models/basketball.glb"
+    modelo3d: "/Models/Basketball_b.glb"
 },
 {
     id: 6 ,
@@ -60,7 +60,7 @@ const moreInformationAreasDeportivas = [{
     description: "En el área de fútbol, ofrecemos dos canchas reglamentarias de césped natural, ideales para entrenamientos y torneos. Contamos con entrenadores calificados que brindan asesoría y entrenamientos personalizados para todas las edades y niveles de experiencia",
     image:"/public/images/areas/futbol.avif",
     image1:"/images/areas/futbol2.avif",
-    modelo3d: "/Models/futbol_02.glb"
+    modelo3d: "/Models/futbol_01.glb"
 }
 
 ];
