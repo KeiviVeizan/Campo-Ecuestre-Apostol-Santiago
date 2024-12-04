@@ -5,6 +5,7 @@ import { Header } from '../Components/Header'
 import RegisterPage from './RegisterPage'
 import '../component css/MoreInformationAreas.css'
 import { Link } from 'react-router-dom'
+import { Footer } from '../Components/Footer'
 export const PlanesPage = () => {
   return (
     <>
@@ -32,6 +33,7 @@ export const PlanesPage = () => {
               ))}
       </section>
       <Link to="/contactanos" class='mb-4 bg-green-800 px-4 rounded-lg text-white hover:scale-125 hover:bg-zinc-600 hover:text-green-400 transition ease-out duration-500'>Contactanos</Link>
+      <Footer/>
     </main>
     </>
   )

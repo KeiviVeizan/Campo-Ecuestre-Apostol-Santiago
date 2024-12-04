@@ -3,6 +3,7 @@ import { useParams } from 'react-router-dom'
 import moreInformationAreasDeportivas from '../assets/moreInformationAreasDeportivas'
 import { Header } from './Header'
 import '../component css/MoreInformation.css'
+import { Footer } from './Footer'
 const getInfomation = (id)=>{
     const info = moreInformationAreasDeportivas.find((index)=>index.id === Number(id) )
     return info
@@ -46,6 +47,7 @@ export const MoreInformation = () => {
                 ></model-viewer>
             </div>
         </main>
+        <Footer/>
     </main>
     </>
     
