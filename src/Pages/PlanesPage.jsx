@@ -2,7 +2,6 @@ import React from 'react'
 import planesDeAccion from '../assets/planesDeAccion'
 import '../component css/Planes-Accion.css'
 import { Header } from '../Components/Header'
-import RegisterPage from './RegisterPage'
 import '../component css/MoreInformationAreas.css'
 import { Link } from 'react-router-dom'
 export const PlanesPage = () => {

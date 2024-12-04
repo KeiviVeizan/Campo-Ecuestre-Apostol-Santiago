@@ -48,15 +48,33 @@ const InterestedList = () => {
       acc[curr.plan] = (acc[curr.plan] || 0) + 1;
       return acc;
     }, {});
-
+  
+    // Colores para cada barra
+    const colors = [
+      "rgba(54, 162, 235, 0.6)", // Azul
+      "rgba(75, 192, 192, 0.6)", // Verde
+      "rgba(255, 206, 86, 0.6)", // Amarillo (opcional para más barras)
+      "rgba(153, 102, 255, 0.6)", // Morado (opcional para más barras)
+    ];
+    const borderColors = [
+      "rgba(54, 162, 235, 1)", // Azul
+      "rgba(75, 192, 192, 1)", // Verde
+      "rgba(255, 206, 86, 1)", // Amarillo
+      "rgba(153, 102, 255, 1)", // Morado
+    ];
+  
     setChartData({
       labels: Object.keys(planCounts),
       datasets: [
         {
           label: "Cantidad de interesados por plan",
           data: Object.values(planCounts),
-          backgroundColor: "rgba(75, 192, 192, 0.6)",
-          borderColor: "rgba(75, 192, 192, 1)",
+          backgroundColor: Object.values(planCounts).map(
+            (_, index) => colors[index % colors.length] // Alternar colores
+          ),
+          borderColor: Object.values(planCounts).map(
+            (_, index) => borderColors[index % borderColors.length] // Alternar bordes
+          ),
           borderWidth: 1,
         },
       ],
