@@ -3,12 +3,13 @@ import morgan from "morgan";
 import authRoutes from "./routes/auth.routes.js";
 import cookieParser from "cookie-parser";
 import cors from "cors";
+import {ip_actual} from "./configip.js"
 
 const app = express();
 
 app.use(
   cors({
-    origin: "http://172.174.1.223:5173",
+    origin: "http://"+ip_actual+":5173",
     credentials: true,
   })
 );

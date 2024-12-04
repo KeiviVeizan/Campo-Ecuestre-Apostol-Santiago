@@ -12,6 +12,7 @@ import {
 import {Header} from "../Components/Header"
 import { Bar } from "react-chartjs-2";
 import { Link } from "react-router-dom";
+import {ip_actual} from "../../Backend/src/configip.js"
 // Registrar componentes necesarios
 ChartJS.register(
   BarElement,
@@ -28,7 +29,7 @@ const InterestedList = () => {
 
   useEffect(() => {
     // Obtener los datos desde el backend
-    fetch("http://172.174.1.223:4000/api/interested", {
+    fetch("http://"+ip_actual+":4000/api/interested", {
       method: "GET",
       headers: {
         "Content-Type": "application/json",
