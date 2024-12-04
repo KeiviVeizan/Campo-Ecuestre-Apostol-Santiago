@@ -28,7 +28,7 @@ const InterestedList = () => {
 
   useEffect(() => {
     // Obtener los datos desde el backend
-    fetch("http://192.168.0.204:4000/api/interested", {
+    fetch("http://172.174.1.223:4000/api/interested", {
       method: "GET",
       headers: {
         "Content-Type": "application/json",
@@ -149,7 +149,7 @@ const InterestedList = () => {
         </div>
       </div>
       <Link className="text-black" to="/add-user">Agregar usuario</Link>
-      <Link onClick={()=>{logout()}}>Salir</Link>
+      <Link className="text-black"onClick={()=>{logout()}}>Salir</Link>
     </div>
     </>
   );

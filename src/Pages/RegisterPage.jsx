@@ -1,10 +1,6 @@
 import { useForm } from "react-hook-form";
-import { useState } from "react";
-
-import { useForm } from 'react-hook-form';
-import { registerRequest } from '../api/auth';
-import { useState } from 'react'; // Para manejar el estado del mensaje
 import { Header } from '../Components/Header'
+import { Footer } from "../Components/Footer";
 export function RegisterPage() {
   const {
     register,
@@ -32,18 +28,18 @@ export function RegisterPage() {
           <h1 className="text-2xl font-bold text-center mb-6">Hable Con Nosotros</h1>
 
         {/* Mostrar mensaje de éxito */}
-        {successMessage && (
+        {/* {successMessage && (
           <div className="mb-4 p-4 text-white bg-green-500 rounded-md text-center">
             {successMessage}
           </div>
-        )}
+        )} */}
 
         {/* Mostrar mensaje de error */}
-        {errorMessage && (
+        {/* {errorMessage && (
           <div className="mb-4 p-4 text-white bg-red-500 rounded-md text-center">
             {errorMessage}
           </div>
-        )}
+        )} */}
 
         <form onSubmit={onSubmit}>
           {/* Nombre */}
@@ -177,6 +173,7 @@ export function RegisterPage() {
         </div>
       </div>
     </div>
+    <Footer/>
     </>
   );
 }
