@@ -12,6 +12,7 @@ import AdminPage from "./Pages/AdminPage.jsx";
 import ProtectedRoute from "./ProtectedRoute.jsx";
 import RegisterFormPage from "./Pages/RegisterFormPage.jsx";
 import VendedorPage from "./Pages/VendedorPage.jsx";
+import { Chatbot } from "./Components/ChatBot.jsx";
 // import config from "./bot/config.js";
 // import MessageParser from "./bot/MessageParser.jsx";
 // import ActionProvider from './bot/ActionProvider.jsx';

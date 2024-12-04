@@ -6,8 +6,8 @@ import { Section4 } from '../../Components/Section4'
 import Section5 from '../../Components/Section5'
 import { Section6 } from '../../Components/Section6'
 import { MessageBubble } from '../../Components/MessageBubble'
-import { Chatbot } from '../../Components/Chatbot'
-
+// import { Chatbot } from '../../Components/Chatbot'
+import { Chatbot } from '../../Components/ChatBot'
 export const HomeScreen = () => {
   return (
     <>
